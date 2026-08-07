@@ -1,8 +1,10 @@
 baseURL: https://nishved.github.io/
 
-title: MyInfo
-paginate: 5
+title: Nishanth Veduruvada
 theme: PaperMod
+
+pagination:
+  pagerSize: 10
 
 enableRobotsTXT: true
 buildDrafts: false
@@ -14,26 +16,24 @@ minify:
   minifyOutput: true
 
 params:
-  env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  title: ExampleSite
-  description: "ExampleSite description"
-  keywords: [Blog, Portfolio, PaperMod]
-  author: Me
-  # author: ["Me", "You"] # multiple authors
-  images: ["<link or path of image for opengraph, twitter-cards>"]
-  DateFormat: "January 2, 2006"
-  defaultTheme: auto # dark, light
+  env: production # enables opengraph, twitter-cards and schema
+  title: Nishanth Veduruvada — Zero Trust AI
+  description: "Nishanth Veduruvada — AI Engineer Advisor at NTT DATA. I architect enterprise AI systems under Zero Trust principles: agentic AI, RAG, AI governance, and enterprise integration."
+  keywords: [Zero Trust AI, Enterprise AI Architecture, Agentic AI, AI Governance, MCP, RAG, Zero Trust Architecture]
+  author: Nishanth Veduruvada
+  DateFormat: "January 2006"
+  defaultTheme: auto
   disableThemeToggle: false
 
   ShowReadingTime: true
   ShowShareButtons: true
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
-  ShowCodeCopyButtons: false
-  ShowWordCount: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: false
   ShowRssButtonInSectionTermList: true
   UseHugoToc: true
-  disableSpecial1stPost: false
+  disableSpecial1stPost: true
   disableScrollToTop: false
   comments: false
   hidemeta: false
@@ -41,68 +41,32 @@ params:
   showtoc: false
   tocopen: false
 
-  assets:
-    # disableHLJS: true # to disable highlight.js
-    # disableFingerprinting: true
-    favicon: "<link / abs url>"
-    favicon16x16: "<link / abs url>"
-    favicon32x32: "<link / abs url>"
-    apple_touch_icon: "<link / abs url>"
-    safari_pinned_tab: "<link / abs url>"
+  mainSections: ["writing"]
 
-  label:
-    text: "Home"
-    icon: /apple-touch-icon.png
-    iconHeight: 35
-
-  # profile-mode
-  profileMode:
-    enabled: false # needs to be explicitly set
-    title: ExampleSite
-    subtitle: "This is subtitle"
-    imageUrl: "<img location>"
-    imageWidth: 120
-    imageHeight: 120
-    imageTitle: my image
-    buttons:
-      - name: Posts
-        url: posts
-      - name: Tags
-        url: tags
-
-  # home-info mode
+  # home-info mode — the homepage hero
   homeInfoParams:
-    Title: "Hi there \U0001F44B"
-    Content: Welcome to my blog
+    Title: "Nishanth Veduruvada"
+    Content: >
+      **Zero Trust AI.** I architect enterprise AI systems the way I'd architect a security
+      perimeter: assume nothing, verify everything.
+
+
+      Currently AI Engineer Advisor at NTT DATA, leading architecture across 8–10 enterprise AI
+      modernization programs. Previously built the Zero Trust framework behind a national-scale
+      insurance data platform — work that's now a registered design and a published paper.
+
+
+      [Work](/work/) · [Writing](/writing/) · [Publications & IP](/publications/) · [Now](/now/) · [About](/about/)
 
   socialIcons:
-    - name: x
-      url: "https://x.com/"
-    - name: stackoverflow
-      url: "https://stackoverflow.com"
     - name: github
-      url: "https://github.com/"
-
-  analytics:
-    google:
-      SiteVerificationTag: "XYZabc"
-    bing:
-      SiteVerificationTag: "XYZabc"
-    yandex:
-      SiteVerificationTag: "XYZabc"
-
-  cover:
-    hidden: true # hide everywhere but not in structured data
-    hiddenInList: true # hide on list pages and home
-    hiddenInSingle: true # hide on single page
-
-  editPost:
-    URL: "https://github.com/<path_to_repo>/content"
-    Text: "Suggest Changes" # edit text
-    appendFilePath: true # to append file path to Edit link
+      url: "https://github.com/NishVed"
+    - name: linkedin
+      url: "https://linkedin.com/in/nish-ved"
+    - name: email
+      url: "mailto:nishanth.themaster@gmail.com"
 
   # for search
-  # https://fusejs.io/api/options.html
   fuseOpts:
     isCaseSensitive: false
     shouldSort: true
@@ -110,29 +74,34 @@ params:
     distance: 1000
     threshold: 0.4
     minMatchCharLength: 0
-    limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
+    limit: 10
     keys: ["title", "permalink", "summary", "content"]
+
 menu:
   main:
-    - identifier: categories
-      name: categories
-      url: /categories/
+    - identifier: writing
+      name: Writing
+      url: /writing/
       weight: 10
-    - identifier: tags
-      name: tags
-      url: /tags/
+    - identifier: work
+      name: Work
+      url: /work/
       weight: 20
-    - identifier: example
-      name: example.org
-      url: https://example.org
+    - identifier: publications
+      name: Publications
+      url: /publications/
       weight: 30
+    - identifier: now
+      name: Now
+      url: /now/
+      weight: 40
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 50
+
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
 markup:
   highlight:
     noClasses: false
-    # anchorLineNos: true
-    # codeFences: true
-    # guessSyntax: true
-    # lineNos: true
-    # style: monokai
