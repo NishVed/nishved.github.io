@@ -43,5 +43,34 @@ agentic AI platforms at enterprise scale — is the same question asked in diffe
 That's what I mean by Zero Trust AI, and it's what most of my [writing](/writing/) and
 [work](/work/) here is about.
 
+## How I lead
+
+My job is architecture and technical direction, not implementation. The team — senior engineers,
+AI engineers and data scientists — builds; I'm accountable for the shape of what gets built and
+for the decisions that are expensive to reverse.
+
+In practice that means a few things. **Architecture reviews and decision records**, so that the
+reasoning behind a choice survives longer than the meeting it was made in — the trade-off is
+usually the interesting part, not the conclusion. **Reusable platform work over per-engagement
+rebuilds**, which is the entire premise of the agentic platform: when five teams are solving tool
+integration, identity and audit separately, the fix is a platform layer, not five better
+implementations. And **stakeholder alignment**, because most architecture decisions at this scale
+are really negotiations about constraints someone else owns.
+
+The part I care most about is making the reasoning legible. An architecture nobody on the team
+can explain back to you isn't a shared architecture — it's a bottleneck with your name on it.
+
+## Away from the architecture
+
+I play and teach [guitar](/explore/guitar/), and I make
+[Beyond Listening](/beyond-listening/) — a series that takes songs apart to work out why they do
+what they do. I also [cook](/explore/kitchen/) and [travel](/explore/travel/) fairly slowly.
+
+It's less of a context switch than it sounds. The instinct is identical: find the structure
+underneath something that appears to just work, then explain it well enough that someone else can
+see it too.
+
+---
+
 You can reach me by [email](mailto:nishanth.themaster@gmail.com) or on
 [LinkedIn](https://linkedin.com/in/nish-ved).

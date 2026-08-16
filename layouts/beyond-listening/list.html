@@ -1,0 +1,43 @@
+{{- define "main" }}
+<div data-domain="music">
+  <header class="page-header">
+    <h1>{{ .Title }}</h1>
+  </header>
+
+  {{- with .Content }}
+  <div class="post-content">{{ . }}</div>
+  {{- end }}
+
+  {{- $episodes := sort .RegularPages "Params.episode" }}
+  {{- with $episodes }}
+  <section aria-label="Episodes">
+    <h2 class="visually-hidden">Episodes</h2>
+    {{- range . }}
+    <article class="episode">
+      <div class="episode__num" aria-hidden="true">
+        {{- printf "%02d" (int .Params.episode) -}}
+      </div>
+      <div>
+        <h3 class="episode__title">
+          <a href="{{ .RelPermalink }}">
+            <span class="visually-hidden">Episode {{ .Params.episode }}: </span>{{ .Title }}
+          </a>
+        </h3>
+        {{- if .Params.film }}
+        <p class="episode__song">
+          <em>{{ .Params.song }}</em> — {{ .Params.film }}{{ with .Params.composer }} · music by {{ . }}{{ end }}
+        </p>
+        {{- end }}
+        <p class="episode__body">{{ .Description }}</p>
+        {{- with .Params.concepts }}
+        <ul class="tagset">
+          {{- range . }}<li>{{ . }}</li>{{ end }}
+        </ul>
+        {{- end }}
+      </div>
+    </article>
+    {{- end }}
+  </section>
+  {{- end }}
+</div>
+{{- end }}

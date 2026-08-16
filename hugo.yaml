@@ -1,6 +1,6 @@
 baseURL: https://nishved.github.io/
 
-title: Nishanth Veduruvada
+title: Nishanth Veduruvada — AI, Security & Systems Architect
 theme: PaperMod
 
 pagination:
@@ -16,17 +16,30 @@ minify:
   minifyOutput: true
 
 params:
-  env: production # enables opengraph, twitter-cards and schema
-  title: Nishanth Veduruvada — Zero Trust AI
-  description: "Nishanth Veduruvada — AI Engineer Advisor at NTT DATA. I architect enterprise AI systems under Zero Trust principles: agentic AI, RAG, AI governance, and enterprise integration."
-  keywords: [Zero Trust AI, Enterprise AI Architecture, Agentic AI, AI Governance, MCP, RAG, Zero Trust Architecture]
+  env: production
+  title: Nishanth Veduruvada
+  description: "Nishanth Veduruvada — AI, Security & Systems Architect. I design secure, production-grade AI systems: agentic AI, enterprise RAG, AI governance and Zero Trust architecture. Also decoding music, one song at a time."
+  keywords:
+    - AI Architect
+    - Security Architect
+    - Systems Architect
+    - Zero Trust
+    - Agentic AI
+    - Enterprise AI
+    - RAG
+    - MCP
+    - AI Governance
+    - Music Analysis
   author: Nishanth Veduruvada
+  # Keeps the header wordmark short while the <title> tag carries the full role for SEO.
+  label:
+    text: "Nishanth Veduruvada"
   DateFormat: "January 2006"
   defaultTheme: auto
   disableThemeToggle: false
 
   ShowReadingTime: true
-  ShowShareButtons: true
+  ShowShareButtons: false
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
   ShowCodeCopyButtons: true
@@ -41,23 +54,23 @@ params:
   showtoc: false
   tocopen: false
 
+  # Sections that feed the writing feed / RSS
   mainSections: ["writing"]
 
-  # home-info mode — the homepage hero
-  homeInfoParams:
-    Title: "Nishanth Veduruvada"
-    Content: >
-      **Zero Trust AI.** I architect enterprise AI systems the way I'd architect a security
-      perimeter: assume nothing, verify everything.
-
-
+  # --- Identity, used by the custom homepage layout ---
+  identity:
+    name: "Nishanth Veduruvada"
+    short: "Nish"
+    role: "AI, Security & Systems Architect"
+    thesis: "I architect enterprise AI systems the way I'd architect a security perimeter: assume nothing, verify everything."
+    summary: >
       Currently AI Engineer Advisor at NTT DATA, leading AI modernization architecture across the
-      [Syntphony](https://www.syntphony.com/) product ecosystem — platforms serving approximately
-      2 million users. Previously built the Zero Trust framework behind a national-scale insurance
-      data platform — work that's now a registered design and a published paper.
-
-
-      [Work](/work/) · [Writing](/writing/) · [Publications & IP](/publications/) · [Now](/now/) · [About](/about/)
+      Syntphony product ecosystem — platforms serving approximately 2 million users. Previously
+      designed the Zero Trust and AI governance architecture behind a national-scale insurance
+      data platform: work that became a registered design and a published paper.
+    curiosity: >
+      The same instinct runs through everything here — take something complex, work out how it
+      actually functions, then build it or explain it.
 
   socialIcons:
     - name: github
@@ -67,7 +80,6 @@ params:
     - name: email
       url: "mailto:nishanth.themaster@gmail.com"
 
-  # for search
   fuseOpts:
     isCaseSensitive: false
     shouldSort: true
@@ -80,29 +92,34 @@ params:
 
 menu:
   main:
+    - identifier: work
+      name: Architecture
+      url: /work/
+      weight: 10
     - identifier: writing
       name: Writing
       url: /writing/
-      weight: 10
-    - identifier: work
-      name: Work
-      url: /work/
       weight: 20
-    - identifier: publications
-      name: Publications
-      url: /publications/
+    - identifier: beyond-listening
+      name: Beyond Listening
+      url: /beyond-listening/
       weight: 30
-    - identifier: now
-      name: Now
-      url: /now/
+    - identifier: explore
+      name: Explore
+      url: /explore/
       weight: 40
     - identifier: about
       name: About
       url: /about/
       weight: 50
 
-# Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
+taxonomies:
+  tag: tags
+
 pygmentsUseClasses: true
 markup:
   highlight:
     noClasses: false
+  goldmark:
+    renderer:
+      unsafe: true

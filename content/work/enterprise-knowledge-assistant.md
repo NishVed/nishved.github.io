@@ -20,6 +20,8 @@ Azure AI Search over Microsoft Graph–indexed content, which enforces the same 
 already have in SharePoint natively. An LLM query classifier routes each question to the right
 path, or both, when a query spans metrics and documentation.
 
+{{< dual-path >}}
+
 **My role:** sole architect for the end-to-end design — the dual-path agent architecture, the
 query classification approach, the RAG ingestion pipeline, and the Power BI RLS passthrough.
 

@@ -18,6 +18,8 @@ point, and context aggregation (identity, device posture, location, time, data c
 session history). On top of that sits an **Adaptive Trust Engine**, computing a continuous trust
 score per request rather than a binary allow/deny, driving ALLOW / STEP-UP-AUTH / DENY decisions.
 
+{{< trust-pipeline >}}
+
 Above the access layer sits an AI governance layer operating on agent behaviour itself: per-agent
 rate limiting, action-scope enforcement, prompt injection detection, a full decision audit trail,
 and human escalation for high-risk actions. Zero Trust ensures no unauthorised access; the

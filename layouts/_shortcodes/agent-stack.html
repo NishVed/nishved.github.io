@@ -1,0 +1,49 @@
+{{- /* Agentic platform layering: domain agents over a governed tool layer.
+       Emphasis is on the trust boundary, not the box count. */}}
+<figure class="diagram" data-domain="architecture">
+  <svg viewBox="0 0 900 330" role="img" aria-labelledby="as-title as-desc" preserveAspectRatio="xMidYMid meet">
+    <title id="as-title">Agentic platform layering and trust boundary</title>
+    <desc id="as-desc">
+      Four stacked layers. At the top, domain agents communicating peer to peer over A2A. Below
+      them, a platform services layer holding the agent registry, orchestration and a
+      human-in-the-loop approval gateway. Below that, a governed MCP tool layer providing tool
+      registry, authentication, rate limiting and audit logging — marked as the trust boundary
+      every tool call must cross. At the bottom, enterprise systems and data. Arrows flow
+      downward from agents through the trust boundary to enterprise systems.
+    </desc>
+
+    <g>
+      <rect class="d-box d-box--accent" x="20" y="20" width="860" height="62" rx="6" />
+      <text class="d-label" x="40" y="45">Domain agents</text>
+      <text class="d-sub" x="40" y="65">assurance · inventory · fulfillment · RAN automation — collaborating over A2A</text>
+    </g>
+
+    <g>
+      <rect class="d-box" x="20" y="102" width="860" height="62" rx="6" />
+      <text class="d-label" x="40" y="127">Platform services</text>
+      <text class="d-sub" x="40" y="147">agent registry · orchestration · human-in-the-loop approval gateway</text>
+    </g>
+
+    <g>
+      <rect class="d-box d-box--accent" x="20" y="184" width="860" height="70" rx="6" />
+      <text class="d-label" x="40" y="209">Governed MCP tool layer</text>
+      <text class="d-sub" x="40" y="229">tool registry · per-agent identity · rate limiting · action scope · audit log</text>
+      <text class="d-zone-label" x="40" y="247">trust boundary — every tool call crosses here</text>
+    </g>
+
+    <g>
+      <rect class="d-box" x="20" y="274" width="860" height="46" rx="6" />
+      <text class="d-label" x="40" y="303">Enterprise systems &amp; data</text>
+    </g>
+
+    <g>
+      <path class="d-flow" d="M760 82 V96" />
+      <path class="d-arrow" d="M756 96 l4 8 4 -8 z" />
+      <path class="d-flow" d="M760 164 V178" />
+      <path class="d-arrow" d="M756 178 l4 8 4 -8 z" />
+      <path class="d-flow" d="M760 254 V268" />
+      <path class="d-arrow" d="M756 268 l4 8 4 -8 z" />
+    </g>
+  </svg>
+  <figcaption>{{ .Get "caption" | default "Domain teams build agents as plugins; governance is inherited from the platform rather than reimplemented per engagement." }}</figcaption>
+</figure>

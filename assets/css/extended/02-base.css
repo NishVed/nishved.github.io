@@ -1,0 +1,103 @@
+/* =========================================================================
+   Base typography + accessibility primitives
+   ========================================================================= */
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--step-0);
+  line-height: 1.65;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Visible focus for keyboard users on every interactive element. */
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Skip link — first tab stop, visually hidden until focused. */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  padding: 0.7rem 1.1rem;
+  background: var(--theme);
+  color: var(--primary);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  font-size: var(--step--1);
+}
+.skip-link:focus {
+  left: var(--space-s);
+  top: var(--space-s);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Respect reduced-motion globally. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Editorial reading measure for long-form content. */
+.post-content p,
+.post-content ul,
+.post-content ol,
+.post-content blockquote {
+  max-width: 68ch;
+}
+
+.post-content h2 {
+  margin-top: var(--space-l);
+  font-size: var(--step-2);
+  letter-spacing: -0.015em;
+}
+.post-content h3 {
+  margin-top: var(--space-m);
+  font-size: var(--step-1);
+  letter-spacing: -0.01em;
+}
+
+.post-content blockquote {
+  border-inline-start: 2px solid var(--accent);
+  background: none;
+  font-style: normal;
+  color: var(--secondary);
+}
+
+/* Tables: never let them blow out the page on mobile. */
+.post-content table {
+  display: block;
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+/* Section intro copy on list pages. */
+.page-header .post-description {
+  max-width: 62ch;
+  font-size: var(--step-0);
+  color: var(--secondary);
+}

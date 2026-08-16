@@ -1,0 +1,58 @@
+/* =========================================================================
+   Design tokens
+   Extends PaperMod's :root vars rather than replacing them, so the theme's
+   own components keep working while custom components get a richer system.
+   ========================================================================= */
+
+:root {
+  /* Layout — wider than PaperMod's default for editorial + diagram content */
+  --nav-width: 1180px;
+  --main-width: 760px;
+  --wide-width: 1120px;
+
+  /* Type scale (fluid, 1.25 ratio at the top end) */
+  --step--1: clamp(0.83rem, 0.81rem + 0.1vw, 0.89rem);
+  --step-0: clamp(1rem, 0.96rem + 0.2vw, 1.09rem);
+  --step-1: clamp(1.2rem, 1.12rem + 0.4vw, 1.45rem);
+  --step-2: clamp(1.44rem, 1.3rem + 0.7vw, 1.94rem);
+  --step-3: clamp(1.73rem, 1.5rem + 1.15vw, 2.59rem);
+  --step-4: clamp(2.07rem, 1.71rem + 1.8vw, 3.45rem);
+
+  /* Spacing */
+  --space-2xs: 0.375rem;
+  --space-xs: 0.625rem;
+  --space-s: 1rem;
+  --space-m: 1.75rem;
+  --space-l: 2.75rem;
+  --space-xl: 4.5rem;
+  --space-2xl: 7rem;
+
+  /* Accents — one per domain, so sections feel related but distinguishable */
+  --accent-arch: #2f6f9f;   /* architecture / security: cool, structural */
+  --accent-music: #8a5cf6;  /* beyond listening: expressive */
+  --accent-warm: #c2683a;   /* kitchen / travel: warm, tactile */
+  --accent: var(--accent-arch);
+
+  --rule: rgba(0, 0, 0, 0.09);
+  --surface: rgba(0, 0, 0, 0.025);
+  --surface-strong: rgba(0, 0, 0, 0.05);
+
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+    "Liberation Mono", monospace;
+}
+
+:root[data-theme="dark"] {
+  --accent-arch: #6aa9d8;
+  --accent-music: #b294ff;
+  --accent-warm: #e08a57;
+  --rule: rgba(255, 255, 255, 0.12);
+  --surface: rgba(255, 255, 255, 0.035);
+  --surface-strong: rgba(255, 255, 255, 0.07);
+}
+
+/* Domain theming: set once on a section wrapper, inherited by children. */
+[data-domain="architecture"] { --accent: var(--accent-arch); }
+[data-domain="music"] { --accent: var(--accent-music); }
+[data-domain="explore"] { --accent: var(--accent-warm); }

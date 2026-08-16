@@ -22,6 +22,8 @@ of this layer and inherit its governance automatically: per-agent OAuth2 identit
 audit logging, configurable per-agent and per-tool rate limits, a human-in-the-loop approval
 gateway for high-risk actions, and OpenTelemetry tracing per agent turn and tool call.
 
+{{< agent-stack >}}
+
 The governance layer is what I'd call the actual deliverable here — the platform is only reusable
 because every domain agent inherits the same identity, audit, and approval model instead of
 reinventing it.

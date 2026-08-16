@@ -1,0 +1,67 @@
+{{- /* Dual-path retrieval: live analytics vs indexed knowledge, split by a
+       query classifier. The point of the diagram is that these are different
+       paths on purpose. */}}
+<figure class="diagram" data-domain="architecture">
+  <svg viewBox="0 0 900 300" role="img" aria-labelledby="dp-title dp-desc" preserveAspectRatio="xMidYMid meet">
+    <title id="dp-title">Dual-path retrieval architecture</title>
+    <desc id="dp-desc">
+      A natural language query enters a classifier, which routes it down one of two paths, or
+      both. The upper analytics path queries live semantic models with row-level security passed
+      through using the caller's identity, so metric values are never embedded in a vector store.
+      The lower knowledge path retrieves from a permission-scoped search index over documents.
+      Both paths converge on a synthesis step that assembles the final cited answer.
+    </desc>
+
+    <g>
+      <rect class="d-box" x="15" y="120" width="120" height="56" rx="6" />
+      <text class="d-label" x="75" y="145" text-anchor="middle">Query</text>
+      <text class="d-sub" x="75" y="163" text-anchor="middle">natural language</text>
+    </g>
+
+    <g>
+      <rect class="d-box d-box--accent" x="175" y="120" width="130" height="56" rx="6" />
+      <text class="d-label" x="240" y="145" text-anchor="middle">Classifier</text>
+      <text class="d-sub" x="240" y="163" text-anchor="middle">metrics? docs? both?</text>
+    </g>
+
+    {{- /* analytics path */}}
+    <g>
+      <rect class="d-box d-box--accent" x="360" y="30" width="230" height="70" rx="6" />
+      <text class="d-label" x="475" y="56" text-anchor="middle">Live semantic models</text>
+      <text class="d-sub" x="475" y="76" text-anchor="middle">RLS passed through as the caller</text>
+      <text class="d-zone-label" x="475" y="92" text-anchor="middle">values never embedded</text>
+    </g>
+
+    {{- /* knowledge path */}}
+    <g>
+      <rect class="d-box" x="360" y="196" width="230" height="70" rx="6" />
+      <text class="d-label" x="475" y="222" text-anchor="middle">Search index</text>
+      <text class="d-sub" x="475" y="242" text-anchor="middle">hybrid retrieval over documents</text>
+      <text class="d-zone-label" x="475" y="258" text-anchor="middle">permission-scoped</text>
+    </g>
+
+    <g>
+      <rect class="d-box d-box--accent" x="650" y="120" width="235" height="56" rx="6" />
+      <text class="d-label" x="767" y="145" text-anchor="middle">Synthesis</text>
+      <text class="d-sub" x="767" y="163" text-anchor="middle">cited answer</text>
+    </g>
+
+    <g>
+      <path class="d-flow" d="M135 148 H167" />
+      <path class="d-arrow" d="M167 144 l8 4 -8 4 z" />
+
+      <path class="d-flow" d="M305 140 Q335 140 335 100 Q335 65 352 65" />
+      <path class="d-arrow" d="M352 61 l8 4 -8 4 z" />
+
+      <path class="d-flow" d="M305 156 Q335 156 335 196 Q335 231 352 231" />
+      <path class="d-arrow" d="M352 227 l8 4 -8 4 z" />
+
+      <path class="d-flow" d="M590 65 Q625 65 625 105 Q625 140 642 140" />
+      <path class="d-arrow" d="M642 136 l8 4 -8 4 z" />
+
+      <path class="d-flow" d="M590 231 Q625 231 625 191 Q625 156 642 156" />
+      <path class="d-arrow" d="M642 152 l8 4 -8 4 z" />
+    </g>
+  </svg>
+  <figcaption>{{ .Get "caption" | default "Two paths, deliberately. Wrong numbers are worse than no answer, so metrics stay live and grounded rather than indexed." }}</figcaption>
+</figure>

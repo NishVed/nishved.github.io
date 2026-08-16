@@ -1,0 +1,67 @@
+{{- /* Zero Trust decision pipeline. Themes automatically via CSS custom
+       properties; accessible via role="img" + <title>/<desc>. */}}
+<figure class="diagram" data-domain="architecture">
+  <svg viewBox="0 0 900 250" role="img" aria-labelledby="tp-title tp-desc" preserveAspectRatio="xMidYMid meet">
+    <title id="tp-title">The Zero Trust decision pipeline</title>
+    <desc id="tp-desc">
+      A left-to-right pipeline of five stages: Identity (agent and human), Policy (policy
+      administration and information points), Decision (policy decision point plus adaptive trust
+      score), Enforcement (policy enforcement point), and Telemetry (audit trail and traces). A
+      feedback loop runs from Telemetry back to Policy, labelled continuous evaluation, showing
+      that trust is re-evaluated rather than granted once.
+    </desc>
+
+    <g class="d-stage">
+      <rect class="d-box d-box--accent" x="20" y="60" width="150" height="70" rx="6" />
+      <text class="d-label" x="95" y="90" text-anchor="middle">Identity</text>
+      <text class="d-sub" x="95" y="110" text-anchor="middle">agent + human</text>
+    </g>
+
+    <g class="d-stage">
+      <rect class="d-box" x="200" y="60" width="150" height="70" rx="6" />
+      <text class="d-label" x="275" y="90" text-anchor="middle">Policy</text>
+      <text class="d-sub" x="275" y="110" text-anchor="middle">PAP · PIP</text>
+    </g>
+
+    <g class="d-stage">
+      <rect class="d-box d-box--accent" x="380" y="60" width="150" height="70" rx="6" />
+      <text class="d-label" x="455" y="86" text-anchor="middle">Decision</text>
+      <text class="d-sub" x="455" y="104" text-anchor="middle">PDP</text>
+      <text class="d-sub" x="455" y="120" text-anchor="middle">+ trust score</text>
+    </g>
+
+    <g class="d-stage">
+      <rect class="d-box" x="560" y="60" width="150" height="70" rx="6" />
+      <text class="d-label" x="635" y="90" text-anchor="middle">Enforcement</text>
+      <text class="d-sub" x="635" y="110" text-anchor="middle">PEP</text>
+    </g>
+
+    <g class="d-stage">
+      <rect class="d-box" x="740" y="60" width="140" height="70" rx="6" />
+      <text class="d-label" x="810" y="90" text-anchor="middle">Telemetry</text>
+      <text class="d-sub" x="810" y="110" text-anchor="middle">audit · traces</text>
+    </g>
+
+    {{- /* forward arrows */}}
+    <g>
+      <path class="d-flow" d="M170 95 H192" />
+      <path class="d-arrow" d="M192 91 l8 4 -8 4 z" />
+      <path class="d-flow" d="M350 95 H372" />
+      <path class="d-arrow" d="M372 91 l8 4 -8 4 z" />
+      <path class="d-flow" d="M530 95 H552" />
+      <path class="d-arrow" d="M552 91 l8 4 -8 4 z" />
+      <path class="d-flow" d="M710 95 H732" />
+      <path class="d-arrow" d="M732 91 l8 4 -8 4 z" />
+    </g>
+
+    {{- /* feedback loop: telemetry -> policy */}}
+    <g>
+      <path class="d-flow" d="M810 130 V185 Q810 195 800 195 H285 Q275 195 275 185 V138" stroke-dasharray="5 4" />
+      <path class="d-arrow" d="M271 138 l4 -8 4 8 z" />
+      <text class="d-sub" x="545" y="215" text-anchor="middle">continuous evaluation — trust is re-scored, not granted once</text>
+    </g>
+
+    <text class="d-zone-label" x="20" y="40">every request · human or agent</text>
+  </svg>
+  <figcaption>{{ .Get "caption" | default "Access decisions flow through policy, not around it — and telemetry feeds back into the next decision." }}</figcaption>
+</figure>

@@ -1,0 +1,187 @@
+{{- define "main" }}
+{{- $id := site.Params.identity }}
+{{- $work := first 3 (sort (where site.RegularPages "Section" "work") "Weight") }}
+{{- $writing := first 2 (where site.RegularPages "Section" "writing") }}
+{{- $episodes := sort (where site.RegularPages "Section" "beyond-listening") "Params.episode" }}
+
+<div class="home">
+
+  {{- /* ---------- 1. Identity ---------- */}}
+  <header class="hero" data-domain="architecture">
+    <h1 class="hero__name">{{ $id.name }}</h1>
+    <span class="hero__role">{{ $id.role }}</span>
+    <p class="hero__thesis">{{ $id.thesis }}</p>
+    <p class="hero__summary">{{ $id.summary }}</p>
+    <div class="hero__actions">
+      <a class="btn btn--primary" href="/work/">Architecture &amp; case studies</a>
+      <a class="btn" href="/writing/">Writing</a>
+      <a class="btn" href="/about/">About</a>
+    </div>
+  </header>
+
+  {{- /* ---------- 2. What I build ---------- */}}
+  <section class="section" data-domain="architecture" aria-labelledby="h-build">
+    <div class="section__head">
+      <div>
+        <span class="section__kicker">What I build</span>
+        <h2 class="section__title" id="h-build">Architecture, not a technology list</h2>
+      </div>
+    </div>
+    <p class="section__lede">
+      The systems I design tend to have the same shape: something autonomous needs access to
+      something sensitive, and the architecture has to make that safe, explainable and operable.
+      These are the concerns I actually own — the tools underneath them change.
+    </p>
+
+    <div class="capabilities">
+      <article class="capability">
+        <h3 class="capability__name">Identity &amp; authorization</h3>
+        <p class="capability__body">
+          Treating AI agents as first-class identities rather than service accounts borrowing a
+          user's permissions — and passing real user identity through to the data layer instead of
+          filtering after the fact.
+        </p>
+        <p class="capability__impl">Entra ID · OAuth2/OIDC · ZTNA · workload identity · RLS passthrough</p>
+      </article>
+
+      <article class="capability">
+        <h3 class="capability__name">Policy &amp; trust decisions</h3>
+        <p class="capability__body">
+          Zero Trust structured properly: policy administration, decision, enforcement and
+          information points as separate concerns, with continuous trust scoring instead of a
+          binary allow/deny.
+        </p>
+        <p class="capability__impl">NIST 800-207 · PAP/PDP/PEP/PIP · adaptive trust scoring</p>
+      </article>
+
+      <article class="capability">
+        <h3 class="capability__name">Agentic systems</h3>
+        <p class="capability__body">
+          Multi-agent topologies where domain specialists beat one monolithic agent, with standard
+          tool protocols so capability is reusable across teams rather than rebuilt per engagement.
+        </p>
+        <p class="capability__impl">MCP · FastMCP · A2A · CrewAI · LangGraph · Semantic Kernel</p>
+      </article>
+
+      <article class="capability">
+        <h3 class="capability__name">Retrieval &amp; grounding</h3>
+        <p class="capability__body">
+          Deciding what must stay live versus what can be indexed, and making every answer cite its
+          source — including domain-aware parsing where generic chunking destroys retrieval quality.
+        </p>
+        <p class="capability__impl">Azure AI Search · hybrid search · semantic models · custom parsers</p>
+      </article>
+
+      <article class="capability">
+        <h3 class="capability__name">Governance &amp; observability</h3>
+        <p class="capability__body">
+          The layer above access control: per-agent rate limits, action-scope enforcement, full
+          decision audit trails, and human escalation above a risk threshold.
+        </p>
+        <p class="capability__impl">OpenTelemetry · per-agent audit · human-in-the-loop gateways</p>
+      </article>
+
+      <article class="capability">
+        <h3 class="capability__name">Technical leadership</h3>
+        <p class="capability__body">
+          Setting architecture direction for a team of roughly eight engineers and data scientists —
+          architecture reviews, decision records, and the trade-off conversations that precede them.
+        </p>
+        <p class="capability__impl">architecture governance · mentoring · stakeholder alignment</p>
+      </article>
+    </div>
+  </section>
+
+  {{- /* ---------- 3 & 4. Evidence: case studies ---------- */}}
+  {{- with $work }}
+  <section class="section" data-domain="architecture" aria-labelledby="h-work">
+    <div class="section__head">
+      <div>
+        <span class="section__kicker">Selected architecture</span>
+        <h2 class="section__title" id="h-work">Case studies</h2>
+      </div>
+      <a class="section__more" href="/work/">All work →</a>
+    </div>
+    <div class="cards">
+      {{- range . }}
+      <article class="card">
+        {{- with .Description }}<div class="card__eyebrow">{{ index (split . " · ") 0 }}</div>{{ end }}
+        <h3 class="card__title">
+          <a class="card__link" href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </h3>
+        <p class="card__body">{{ .Summary | plainify | truncate 180 }}</p>
+        {{- with .Description }}<div class="card__meta">{{ . }}</div>{{ end }}
+      </article>
+      {{- end }}
+    </div>
+  </section>
+  {{- end }}
+
+  {{- /* ---------- 5. Writing ---------- */}}
+  {{- with $writing }}
+  <section class="section" data-domain="architecture" aria-labelledby="h-writing">
+    <div class="section__head">
+      <div>
+        <span class="section__kicker">Ideas</span>
+        <h2 class="section__title" id="h-writing">Writing</h2>
+      </div>
+      <a class="section__more" href="/writing/">All writing →</a>
+    </div>
+    <div class="cards cards--two">
+      {{- range . }}
+      <article class="card">
+        <div class="card__eyebrow">{{ .Date.Format "January 2006" }}</div>
+        <h3 class="card__title">
+          <a class="card__link" href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </h3>
+        <p class="card__body">{{ with .Description }}{{ . | truncate 200 }}{{ else }}{{ .Summary | plainify | truncate 200 }}{{ end }}</p>
+      </article>
+      {{- end }}
+    </div>
+  </section>
+  {{- end }}
+
+  {{- /* ---------- 6. Creative work ---------- */}}
+  <section class="section" data-domain="music" aria-labelledby="h-bl">
+    <div class="section__head">
+      <div>
+        <span class="section__kicker">Beyond Listening</span>
+        <h2 class="section__title" id="h-bl">Decoding music, one song at a time</h2>
+      </div>
+      <a class="section__more" href="/beyond-listening/">The series →</a>
+    </div>
+    <p class="section__lede">
+      A series that takes music people already know and works out what is actually happening
+      underneath — rhythm, harmony, timbre, form, and the choices a composer made. The same
+      instinct as the architecture work, pointed at something else.
+    </p>
+    {{- with $episodes }}
+    <div class="cards cards--two">
+      {{- range first 2 . }}
+      <article class="card">
+        <div class="card__eyebrow">Episode {{ .Params.episode }}</div>
+        <h3 class="card__title">
+          <a class="card__link" href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </h3>
+        <p class="card__body">{{ with .Description }}{{ . | truncate 180 }}{{ end }}</p>
+        {{- with .Params.song }}<div class="card__meta">{{ . }}{{ with $.Page.Params.composer }} · {{ . }}{{ end }}</div>{{ end }}
+      </article>
+      {{- end }}
+    </div>
+    {{- end }}
+  </section>
+
+  {{- /* ---------- 7. Personal exploration ---------- */}}
+  <section class="section" data-domain="explore" aria-labelledby="h-explore">
+    <div class="section__head">
+      <div>
+        <span class="section__kicker">Explore</span>
+        <h2 class="section__title" id="h-explore">Guitar, kitchen, elsewhere</h2>
+      </div>
+      <a class="section__more" href="/explore/">Explore →</a>
+    </div>
+    <p class="section__lede">{{ $id.curiosity }}</p>
+  </section>
+
+</div>
+{{- end }}
