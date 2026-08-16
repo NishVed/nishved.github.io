@@ -8,19 +8,25 @@
   <div class="post-content">{{ . }}</div>
   {{- end }}
 
-  {{- $episodes := sort .RegularPages "Params.episode" }}
+  {{- /* Sorted by publication order, which is not the same as episode number:
+         the Elements episode sits between 1 and 2 and carries no number. */}}
+  {{- $episodes := sort .RegularPages "Params.order" }}
   {{- with $episodes }}
   <section aria-label="Episodes">
     <h2 class="visually-hidden">Episodes</h2>
     {{- range . }}
     <article class="episode">
-      <div class="episode__num" aria-hidden="true">
-        {{- printf "%02d" (int .Params.episode) -}}
-      </div>
+      {{- if .Params.episode }}
+      <div class="episode__num" aria-hidden="true">{{ printf "%02d" (int .Params.episode) }}</div>
+      {{- else }}
+      <div class="episode__num episode__num--extra" aria-hidden="true">{{ .Params.label | default "Extra" }}</div>
+      {{- end }}
       <div>
         <h3 class="episode__title">
           <a href="{{ .RelPermalink }}">
-            <span class="visually-hidden">Episode {{ .Params.episode }}: </span>{{ .Title }}
+            <span class="visually-hidden">
+              {{- if .Params.episode }}Episode {{ .Params.episode }}: {{ else }}{{ .Params.label | default "Extra" }}: {{ end -}}
+            </span>{{ .Title }}
           </a>
         </h3>
         {{- if .Params.film }}

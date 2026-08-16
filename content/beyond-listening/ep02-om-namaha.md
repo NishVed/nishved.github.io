@@ -1,15 +1,20 @@
 ---
 title: "Om Namaha — A Heartbeat in 7/8"
 episode: 2
+order: 3
 song: "Om Namaha"
 film: "Geetanjali (1989)"
 composer: "Ilaiyaraaja"
+video: "Is_Lm6SCH-4"
+date: 2020-11-27
 description: "A love song built on a heartbeat rhythm in 7/8, a melody that keeps leaping instead of stepping, and a male-female duet that swings between tonic and dominant like a pendulum."
 concepts: ["7/8 meter", "Call and response", "Conjunct and disjunct melody", "Tonic and dominant", "Accidentals", "Counterpoint", "Timbre", "Imitation"]
 ShowToc: true
 TocOpen: false
 hidemeta: true
 ---
+
+{{< yt id="Is_Lm6SCH-4" title="Beyond Listening Episode 2 — Om Namaha from Geetanjali" >}}
 
 ## Why this song
 
@@ -101,5 +106,6 @@ hear the same tonic-dominant logic in a devotional context rather than a romanti
 
 ---
 
-*Episode 2 of Beyond Listening. Start with [Episode 1](/beyond-listening/ep01-what-makes-music-music/)
-if you want the vocabulary first.*
+*Episode 2 of Beyond Listening. Start with the
+[Elements](/beyond-listening/elements-of-a-musical-composition/) episode if you want the vocabulary
+first, or carry on to [Khwabon Ke Parinde](/beyond-listening/ep03-khwabon-ke-parinde/).*

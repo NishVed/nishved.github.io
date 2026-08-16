@@ -32,8 +32,10 @@ industry commentary. Most recent:
 
 ## Playing
 
-Guitar, and making [Beyond Listening](/beyond-listening/) — two episodes in. Episode 2 pulls apart
-Ilaiyaraaja's *Om Namaha*, which is a love song in 7/8 built on a heartbeat.
+Guitar, and [Beyond Listening](/beyond-listening/) — three episodes plus a standalone on the
+elements, published on [Candid Kalakaar](https://www.youtube.com/@candidkalakaar4827). Episode 2
+pulls apart Ilaiyaraaja's *Om Namaha*, a love song in 7/8 built on a heartbeat; Episode 3 gets
+into the bossa nova underneath *Khwabon Ke Parinde*.
 
 ## Exploring
 

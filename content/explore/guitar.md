@@ -20,7 +20,14 @@ It's the same loop as architecture, honestly. You don't fully understand a syste
 had to explain it to someone who will immediately find the part of your explanation that doesn't
 hold up.
 
+## Playing
+
+A cover of *Roja* — the A. R. Rahman album that set off the whole
+[Beyond Listening](/beyond-listening/) series in the first place.
+
+{{< yt id="g98moskV5ys" title="Roja — guitar cover" >}}
+
 {{< note >}}
-**More coming here** — teaching approach, what I work on with students, and recordings. If you're
-interested in lessons, [email me](mailto:nishanth.themaster@gmail.com).
+**More coming here** — teaching approach, what I work on with students, and more recordings. If
+you're interested in lessons, [email me](mailto:nishanth.themaster@gmail.com).
 {{< /note >}}

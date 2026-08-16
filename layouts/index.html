@@ -2,7 +2,7 @@
 {{- $id := site.Params.identity }}
 {{- $work := first 3 (sort (where site.RegularPages "Section" "work") "Weight") }}
 {{- $writing := first 2 (where site.RegularPages "Section" "writing") }}
-{{- $episodes := sort (where site.RegularPages "Section" "beyond-listening") "Params.episode" }}
+{{- $episodes := sort (where site.RegularPages "Section" "beyond-listening") "Params.order" "desc" }}
 
 <div class="home">
 
@@ -159,12 +159,14 @@
     <div class="cards cards--two">
       {{- range first 2 . }}
       <article class="card">
-        <div class="card__eyebrow">Episode {{ .Params.episode }}</div>
+        <div class="card__eyebrow">
+          {{- if .Params.episode }}Episode {{ .Params.episode }}{{ else }}{{ .Params.label | default "Extra" }}{{ end -}}
+        </div>
         <h3 class="card__title">
           <a class="card__link" href="{{ .RelPermalink }}">{{ .Title }}</a>
         </h3>
         <p class="card__body">{{ with .Description }}{{ . | truncate 180 }}{{ end }}</p>
-        {{- with .Params.song }}<div class="card__meta">{{ . }}{{ with $.Page.Params.composer }} · {{ . }}{{ end }}</div>{{ end }}
+        {{- with .Params.film }}<div class="card__meta">{{ . }}{{ with $.Params.composer }} · {{ . }}{{ end }}</div>{{ end }}
       </article>
       {{- end }}
     </div>

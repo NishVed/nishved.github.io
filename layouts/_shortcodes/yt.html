@@ -1,0 +1,15 @@
+{{- /* Privacy-friendly, lazy-loaded, responsive YouTube embed.
+       Usage: {{< yt id="VIDEOID" title="Accessible title" >}} */}}
+{{- $id := .Get "id" }}
+{{- $title := .Get "title" | default "Video" }}
+{{- with $id }}
+<div class="video">
+  <iframe
+    src="https://www.youtube-nocookie.com/embed/{{ . }}"
+    title="{{ $title }}"
+    loading="lazy"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+</div>
+{{- end }}

@@ -356,3 +356,31 @@
 body.is-home .main {
   max-width: var(--wide-width);
 }
+
+/* ---------- Video embeds ---------- */
+
+.video {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  margin: var(--space-m) 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--surface-strong);
+  border: 1px solid var(--rule);
+}
+.video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Episode number slot also carries non-numbered entries. */
+.episode__num--extra {
+  font-size: var(--step--1);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding-top: 0.55em;
+}

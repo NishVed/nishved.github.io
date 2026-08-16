@@ -1,13 +1,17 @@
 ---
-title: "What Makes Music, Music?"
-episode: 1
-song: "Foundations"
-description: "Sound is everywhere. Only some of it is music. This episode works through the six elements that do the separating — rhythm, melody, harmony, dynamics, tone colour and form."
+title: "Elements of a Musical Composition"
+order: 2
+label: "Toolkit"
+video: "8ZpUI-87KQw"
+date: 2020-11-08
+description: "Sound is everywhere. Only some of it is music. A standalone episode on the elements that do the separating — rhythm, melody, harmony, tone colour and form."
 concepts: ["Rhythm", "Tempo", "Meter", "Melody", "Harmony", "Modality", "Tonality", "Tone colour", "Form"]
 ShowToc: true
 TocOpen: false
 hidemeta: true
 ---
+
+{{< yt id="8ZpUI-87KQw" title="Beyond Listening — Elements Of A Musical Composition" >}}
 
 ## Why start here
 
@@ -92,5 +96,6 @@ noticeable when it doesn't.
 
 ---
 
-*Episode 1 of Beyond Listening. Next: these ideas applied to a single song — Ilaiyaraaja's
-[Om Namaha](/beyond-listening/ep02-om-namaha/), which turns out to be in 7/8.*
+*A standalone episode of Beyond Listening — the vocabulary the rest of the series leans on. If you
+want to see it applied to a single song, try [Om Namaha](/beyond-listening/ep02-om-namaha/), which
+turns out to be in 7/8.*
