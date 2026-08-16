@@ -69,8 +69,10 @@ params:
       designed the Zero Trust and AI governance architecture behind a national-scale insurance
       data platform: work that became a registered design and a published paper.
     curiosity: >
-      The same instinct runs through everything here — take something complex, work out how it
-      actually functions, then build it or explain it.
+      Beyond Listening started as a music series. It turned out to be the name for how I approach
+      most things — get past the surface of something, work out what is actually happening
+      underneath, then build it or explain it. The architecture above is the same habit, pointed
+      at systems instead of songs.
 
   socialIcons:
     - name: github

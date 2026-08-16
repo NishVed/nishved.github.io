@@ -60,15 +60,24 @@ are really negotiations about constraints someone else owns.
 The part I care most about is making the reasoning legible. An architecture nobody on the team
 can explain back to you isn't a shared architecture — it's a bottleneck with your name on it.
 
-## Away from the architecture
+## Beyond listening
 
-I play and teach [guitar](/explore/guitar/), and I make
-[Beyond Listening](/beyond-listening/) — a series that takes songs apart to work out why they do
-what they do. I also [cook](/explore/kitchen/) and [travel](/explore/travel/) fairly slowly.
+In 2020 I started a YouTube series called [Beyond Listening](/beyond-listening/), taking apart
+Indian film music one song at a time — an Ilaiyaraaja love song that turns out to be in 7/8, the
+bossa nova harmony hiding under a road-trip number.
 
-It's less of a context switch than it sounds. The instinct is identical: find the structure
-underneath something that appears to just work, then explain it well enough that someone else can
-see it too.
+The name has quietly become the most accurate description of how I work. Listening is the passive
+default: you let something wash over you and register that it worked. Going *beyond* it means
+asking what actually produced the effect — which structure, which decision, which trade-off
+someone made on purpose.
+
+That's the same question I ask of a system. Why this boundary and not that one. What was given up
+here, and in exchange for what. An architecture and a song are both things that appear to simply
+work until you look at the mechanism.
+
+So the [guitar](/explore/guitar/), the [kitchen](/explore/kitchen/) and the
+[travelling](/explore/travel/) aren't a change of subject from the architecture. They're the same
+habit with the surface swapped out.
 
 ---
 
