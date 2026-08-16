@@ -390,13 +390,26 @@ body.is-home .main {
 .photo {
   margin: var(--space-m) 0;
 }
+/* Photos are capped by viewport height, not just width. Instagram sources are
+   portrait (4:5) and story screenshots are 9:16 — at full column width those
+   render 950px and 1350px tall respectively, which swamps the page. Capping
+   height and letting width follow keeps tall and wide images comparable. */
 .photo img {
   display: block;
-  width: 100%;
+  width: auto;
   height: auto;
+  max-width: 100%;
+  max-height: 72vh;
+  margin: 0 auto;
   border-radius: var(--radius);
   border: 1px solid var(--rule);
   background: var(--surface);
+}
+
+/* Portrait sources get a tighter cap still, so a column of them reads as a
+   sequence rather than a slideshow. */
+.photo--tall img {
+  max-height: 62vh;
 }
 .photo figcaption {
   margin-top: var(--space-xs);

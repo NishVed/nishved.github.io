@@ -1,7 +1,7 @@
 ---
 title: "Travel"
 weight: 2
-description: "Going places as a travelling musician — Europe in 2019, Vietnam in 2026, mostly following the music and the food."
+description: "Going places as a travelling musician — Europe, Vietnam, Dubai, the Himalaya and a long monsoon drive through south India, mostly following the music and the food."
 ShowReadingTime: false
 hidemeta: true
 ---
@@ -87,20 +87,55 @@ the years since and somehow hasn't.
 
 **Hoi An**, then **Da Nang**, and the rain caught up with us at the end.
 
-## Closer to home
+## Dubai
 
-A monsoon road trip through **Coorg and Kerala** — a trek up to Thadiyandamol and out to Chelavara
-Falls, then a houseboat on the backwaters. It rained more or less continuously, which is both the
-point and the risk of going in July.
+I went for **GISEC Global** in May 2025 — the region's big cybersecurity conference, and squarely
+the day job — but a conference is a poor reason to see nothing of a city.
+
+{{< photo src="travel/dubai-meena-bazaar.webp" alt="A slender minaret lit green against a dark blue night sky, a crescent moon directly above it, older low buildings on either side." caption="Meena Bazaar, on the old side of the creek. The half of Dubai that predates the skyline." >}}
+
+So: the world's tallest building, obviously, because you do that once. But the part I'd go back
+for is the older side of the creek — Meena Bazaar at night, and a Bosnian place where the ćevapi
+came under a lid of somun bread with kajmak and ajvar, which is not a thing I expected to find in
+the Gulf.
+
+{{< photo src="travel/dubai-bosnian-house.webp" alt="A metal platter holding grilled ćevapi sausages tucked under a folded flatbread, with chopped raw onion, red ajvar, mustard and white kajmak alongside, in a warmly lit restaurant." caption="Bosnian House. Dubai is full of other people's home cooking, which is the most interesting thing about it." >}}
+
+## The monsoon road trip
+
+July 2022 — a long drive down through **Karnataka**, across **Kerala**, and out into **Tamil
+Nadu**, in the middle of the monsoon.
+
+It started in the coffee country: **Chikmagalur**, then **Coorg**, where I sat in a plantation in
+the rain playing *Ode to Joy* badly. The trek out to **Thadiyandamol** and **Chelavara Falls** was
+the wettest walking I've done.
 
 {{< photo src="travel/coorg-trek-stream.webp" alt="A man in a bright yellow rain poncho sitting on a rock in the middle of a fast-flowing forest stream, drinking from a bottle, dense wet green forest all around." caption="Chelavara, mid-trek. The Shiraz was load-bearing." >}}
 
-{{< photo src="travel/kerala-rain-coast.webp" alt="A man in a denim shirt and sunglasses leaning against a rough stone wall above a rough green sea, rain falling." caption="The coast, same trip." >}}
+Then down into Kerala — **Wayanad** in continuous rain, a **houseboat** on the backwaters, and
+**Varkala**, where the cliff meets the sea and the cafés are all facing the wrong way to watch it.
 
-And in **Hyderabad**, where I live: the old city, which you should never skip, and a long-running
-project of working through the city's cafés — including a coffee platter with a praline that I had
-genuinely mixed feelings about, which is still more interesting than something merely fine.
+{{< photo src="travel/kerala-rain-coast.webp" alt="A man in a denim shirt and sunglasses leaning against a rough stone wall above a rough green sea, rain falling." caption="The Kerala coast, mid-monsoon." >}}
+
+And then **Tamil Nadu**, which after two weeks of green and grey arrived in colour.
+
+## Meghalaya
+
+May 2024, on a bike, through **Shillong** and the canyons — one of the wettest places on earth,
+visited in the rain, which was the entirely predictable outcome.
+
+## Into 2025
+
+**Brahmatal** — a winter trek in the Uttarakhand Himalaya, walked across the new year. Cold
+nights, warm company. A completely different proposition from every trip above, and the one I
+think about most.
+
+## Hyderabad
+
+Where I live: the old city, which you should never skip, and a long-running project of working
+through the city's cafés — including a coffee platter with a praline that I had genuinely mixed
+feelings about, which is still more interesting than something merely fine.
 
 {{< note >}}
-**More coming here** — notes from places I haven't written up yet.
+**More coming here** — Meghalaya and Brahmatal both deserve more than a paragraph.
 {{< /note >}}

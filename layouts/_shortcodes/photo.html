@@ -22,11 +22,15 @@
   {{- $main := $img.Resize (printf "%dx webp q80" $maxw) }}
   {{- $srcset = $srcset | append (printf "%s %dw" $main.RelPermalink $maxw) }}
 
-<figure class="photo">
+  {{- /* Portrait sources (taller than roughly 10:7) get a tighter height cap. */}}
+  {{- $ratio := div (float $img.Width) (float $img.Height) }}
+  {{- $tall := lt $ratio 0.7 }}
+
+<figure class="photo{{ if $tall }} photo--tall{{ end }}">
   <img
     src="{{ $main.RelPermalink }}"
     srcset="{{ delimit $srcset ", " }}"
-    sizes="(max-width: 760px) 100vw, 760px"
+    sizes="{{ if $tall }}(max-width: 760px) 80vw, 460px{{ else }}(max-width: 760px) 100vw, 760px{{ end }}"
     width="{{ $main.Width }}" height="{{ $main.Height }}"
     alt="{{ $alt }}"
     loading="lazy" decoding="async">
