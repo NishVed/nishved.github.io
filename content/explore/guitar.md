@@ -8,6 +8,8 @@ hidemeta: true
 
 I play guitar, and I teach it.
 
+{{< photo src="guitar/guitar-case-lift.webp" alt="A man in a white sweatshirt photographing himself in a lift mirror, a guitar case slung across his back." caption="The case goes most places I do." >}}
+
 Teaching is the part that changed how I hear music. You can play something correctly for years
 without being able to say why it works. The moment a student asks *why does that chord sound
 sad* — or worse, *why does mine sound wrong when I'm playing the same notes* — you have to

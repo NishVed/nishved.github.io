@@ -384,3 +384,23 @@ body.is-home .main {
   text-transform: uppercase;
   padding-top: 0.55em;
 }
+
+/* ---------- Photos ---------- */
+
+.photo {
+  margin: var(--space-m) 0;
+}
+.photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  border: 1px solid var(--rule);
+  background: var(--surface);
+}
+.photo figcaption {
+  margin-top: var(--space-xs);
+  font-size: var(--step--1);
+  color: var(--secondary);
+  line-height: 1.5;
+}

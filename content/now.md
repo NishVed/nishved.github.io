@@ -39,5 +39,6 @@ into the bossa nova underneath *Khwabon Ke Parinde*.
 
 ## Exploring
 
-Travelling slowly enough that the second day differs from the first — and writing up the
-[2019 Europe trip](/explore/travel/) properly, six years late.
+Just back from **Vietnam** — Hanoi, Huế, Hoi An, Da Nang — and still thinking about a bún bò Huế
+stall in Huế that Anthony Bourdain sent me to. Writing up
+[that trip and the 2019 Europe one](/explore/travel/) properly.

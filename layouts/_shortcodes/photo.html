@@ -1,0 +1,37 @@
+{{- /* Responsive, lazy-loaded photo via Hugo's image pipeline.
+       Usage: {{< photo src="travel/split-old-town.jpg" alt="..." caption="..." >}}
+       Emits a webp srcset at three widths; falls back gracefully for formats
+       Hugo cannot process. */}}
+{{- $src := .Get "src" }}
+{{- $alt := .Get "alt" | default "" }}
+{{- $caption := .Get "caption" }}
+{{- $img := resources.Get (printf "img/%s" $src) }}
+
+{{- if $img }}
+  {{- $wide := $img }}
+  {{- $srcset := slice }}
+  {{- if ge $img.Width 640 }}
+    {{- $w640 := ($img.Resize "640x webp q80").RelPermalink }}
+    {{- $srcset = $srcset | append (printf "%s 640w" $w640) }}
+  {{- end }}
+  {{- if ge $img.Width 1000 }}
+    {{- $w1000 := ($img.Resize "1000x webp q80").RelPermalink }}
+    {{- $srcset = $srcset | append (printf "%s 1000w" $w1000) }}
+  {{- end }}
+  {{- $maxw := cond (gt $img.Width 1400) 1400 $img.Width }}
+  {{- $main := $img.Resize (printf "%dx webp q80" $maxw) }}
+  {{- $srcset = $srcset | append (printf "%s %dw" $main.RelPermalink $maxw) }}
+
+<figure class="photo">
+  <img
+    src="{{ $main.RelPermalink }}"
+    srcset="{{ delimit $srcset ", " }}"
+    sizes="(max-width: 760px) 100vw, 760px"
+    width="{{ $main.Width }}" height="{{ $main.Height }}"
+    alt="{{ $alt }}"
+    loading="lazy" decoding="async">
+  {{- with $caption }}<figcaption>{{ . | markdownify }}</figcaption>{{ end }}
+</figure>
+{{- else }}
+  {{- warnf "photo shortcode: asset not found: img/%s" $src }}
+{{- end }}
