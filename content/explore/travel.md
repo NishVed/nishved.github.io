@@ -1,7 +1,7 @@
 ---
 title: "Travel"
 weight: 2
-description: "Going places as a travelling musician — the Netherlands, Czechia, Austria, Hungary and Croatia in 2019; Dubai, Vietnam, and a long way around India since."
+description: "Going places as a travelling musician — seven countries across Europe in 2019, then Dubai, Vietnam, and a long way around India."
 ShowReadingTime: false
 hidemeta: true
 ---
@@ -11,7 +11,8 @@ see. What I do instead is follow the music and eat what's in front of me, and th
 to be the fastest way into a place.
 
 In October 2019 I went to Europe for the first time, alone, with a guitar's worth of intent and
-no real plan. Everything below follows from that.
+no real plan — seven countries in three weeks, mostly by train, several of them for a single night.
+Everything below follows from that.
 
 ---
 
@@ -33,6 +34,19 @@ Later, in the lobby of the hostel, I was picking out something I'd heard the nig
 battered house guitar when another traveller came over. He'd been at the same show.
 
 That kept happening. Nobody tells you that carrying an instrument does the introductions for you.
+
+---
+
+## Germany
+
+*Berlin — 11–12 October 2019*
+
+Berlin was one night, in a hostel off Mohrenstrasse, squeezed between Amsterdam and the long haul
+south. Not remotely enough for that city, and I knew it at the time.
+
+What you get in a night is a first impression, and Berlin's is that it refuses to be charming at
+you. After Amsterdam's canals and before Prague's spires, it was the one place on the trip that
+seemed entirely uninterested in whether I liked it. I did.
 
 ---
 
@@ -69,9 +83,23 @@ Somewhere in there I drank something local that tasted, I promise you, exactly l
 
 ---
 
+## Slovenia
+
+*Ljubljana — 19–20 October 2019*
+
+Another single night, and the strangest bed of the trip: Hostel Celica, in Ljubljana's Metelkova
+quarter, which is a converted military prison. The rooms are the old cells, each one redesigned by
+a different artist, and you sleep behind the original bars.
+
+Metelkova itself is an occupied former barracks turned autonomous arts complex — every surface
+covered in murals, sculpture welded out of scrap. It is the least Habsburg thing imaginable to
+find two hours from Vienna, which is exactly why it works.
+
+---
+
 ## Hungary
 
-*Budapest — 19–20 October 2019*
+*Budapest — 20 October 2019*
 
 The best meal I ate in Budapest was Lebanese, which felt less like a detour than the point.
 
@@ -121,15 +149,29 @@ night of the trip. Worth the nail.
 
 *Dubai — May 2025*
 
-I went for **GISEC Global**, the region's big cybersecurity conference, which is squarely the day
-job. But a conference is a poor reason to see nothing of a city.
+I went for **GISEC Global**, the Middle East's largest cybersecurity event, at the Dubai World
+Trade Centre from the 6th to the 8th of May. That is squarely the day job — three days of
+conversations about exactly the problems I spend my working life on, conducted in a hall the size
+of a small town.
+
+{{< photo src="travel/dubai-gisec-gate.webp" alt="A man standing in front of the Dubai World Trade Centre exhibition gate beneath a huge digital banner reading GISEC GLOBAL 2025, Middle East and Africa's largest cybersecurity event, with rows of fountains along the plaza." caption="GISEC Global 2025, Dubai World Trade Centre. The reason I was there." >}}
+
+But a conference is a poor reason to see nothing of a city, and Dubai splits cleanly in two.
+
+There is the **Downtown** version everybody arrives for — the world's tallest building, which you
+do once, mostly so you can stop being asked whether you did.
+
+And then there is the other side of the creek, **Bur Dubai** and **Deira**, which is older, denser
+and considerably more interesting. **Meena Bazaar** after dark is textile shops and gold souks and
+a minaret lit green against the sky, and it feels far more like a working city than a rendering of
+one.
 
 {{< photo src="travel/dubai-meena-bazaar.webp" alt="A slender minaret lit green against a dark blue night sky, a crescent moon directly above it, older low buildings on either side." caption="Meena Bazaar, on the old side of the creek. The half of Dubai that predates the skyline." >}}
 
-So: the world's tallest building, obviously, because you do that once. But the part I'd go back
-for is the older side of the creek — Meena Bazaar after dark, and a Bosnian place where the ćevapi
-arrived under a lid of somun bread with kajmak and ajvar, which is not a thing I expected to find
-in the Gulf.
+That side is also where the food is, and Dubai's food is really other people's food — a city
+composed almost entirely of somewhere else. The best thing I ate was Bosnian: ćevapi arriving
+under a lid of somun bread with kajmak and ajvar, which is not a thing I expected to find in the
+Gulf.
 
 {{< photo src="travel/dubai-bosnian-house.webp" alt="A metal platter holding grilled ćevapi sausages tucked under a folded flatbread, with chopped raw onion, red ajvar, mustard and white kajmak alongside, in a warmly lit restaurant." caption="Bosnian House. Dubai is full of other people's home cooking, which is the most interesting thing about it." >}}
 
@@ -137,25 +179,61 @@ in the Gulf.
 
 ## Vietnam
 
-*Hanoi, Huế, Hoi An, Da Nang — May–June 2026*
+*Hanoi, Hà Nam, Huế, Hoi An, Da Nang — May–June 2026*
 
-Three days in **Hanoi**, most of which happened by accident. We fell into a random street food
-joint one evening and it turned into something else entirely by the end of it, which is the
-correct outcome for a street food joint. There was a mandatory pilgrimage to a music store. And
-one night we sat and watched the whole of Radiohead's *In Rainbows — From the Basement*, the 2008
-live session, start to finish, in a country neither of us lived in.
+We went top to bottom, north to centre, mostly overland. Vietnam is long and thin and rewards
+doing it that way — the food changes every few hundred kilometres and tells you where you are more
+reliably than the signs do.
 
-Then **Huế**, which I went to on Anthony Bourdain's advice.
+### Hanoi
+
+Three days, most of which happened by accident. We fell into a random street food joint one
+evening and it turned into something else entirely by the end of it, which is the correct outcome
+for a street food joint. There was a mandatory pilgrimage to a music store. And one night we sat
+and watched the whole of Radiohead's *In Rainbows — From the Basement*, the 2008 live session,
+start to finish, in a country neither of us lived in.
+
+### Hà Nam
+
+South of Hanoi, and mostly a stop rather than a destination — but the convenience stores alone
+justify it. Vietnam sells vacuum-packed marinated chicken feet as a casual snack, hanging on a
+rack next to the crisps, forty grams for sixteen thousand đồng.
+
+{{< photo src="travel/vietnam-hanam-snacks.webp" alt="Brightly coloured vacuum-sealed snack packets hanging on a shop rack, each containing a single marinated chicken foot, labelled Chân Gà, with a price tag reading 16,000 VND." caption="Hà Nam. Chicken feet, forty grams, sixteen thousand đồng, sold like a packet of crisps." >}}
+
+I find this genuinely admirable. A whole category of snack we've decided is unthinkable, sitting
+there completely unbothered.
+
+### Huế
+
+The old imperial capital, and the one stop I planned around a recommendation — Anthony Bourdain's.
 
 {{< photo src="travel/hue-bun-bo-menu.webp" alt="A weathered laminated menu board for a Vietnamese street stall reading BÚN BÒ HUẾ, with the name Kim Châu and the line Anthony Bourdain's Hue Lady circled in white, above a list of Huế dishes." caption="Kim Châu — the bún bò Huế stall Bourdain sent half the world to. Worth the detour." >}}
 
-He'd found a woman in Huế selling bún bò Huế and told everyone about it, so I went and found the
-same stall. It's the sort of recommendation that could easily have curdled into a tourist trap in
-the years since, and somehow hasn't.
+He'd found a woman in Huế selling bún bò Huế — the local beef noodle soup, sharper and more
+lemongrass-heavy than phở — and told everyone about it. So I went and found the same stall. It's
+the sort of recommendation that could easily have curdled into a tourist trap in the years since,
+and somehow hasn't.
 
-**Hoi An**, then **Da Nang**, and the rain caught up with us at the end. The best meals of that
-trip did not come with white tablecloths — which is, I think, true almost everywhere, and
-undeniable in Vietnam.
+Huế mornings are their own argument for getting up early.
+
+### Hoi An
+
+Yellow walls, blue shutters, lanterns, and a tailoring industry that will make you a suit before
+dinner. It is as photogenic as everyone says and slightly self-aware about it, which I didn't
+mind.
+
+{{< photo src="travel/vietnam-hoian-cafe.webp" alt="A café front in Hoi An with an ochre-yellow wall and bright blue folding doors, a neon sign reading IVY coffee-tea, a yellow silk lantern above, and red plastic chairs around small tables on the pavement." caption="Hoi An. The plastic chairs are the giveaway that a place is still for locals." >}}
+
+The red plastic chair is the reliable indicator across all of Vietnam: wherever they're out on the
+pavement, the food is worth stopping for.
+
+### Da Nang
+
+The coast, and the end of the line — where the rain finally caught up with us.
+
+The best meals of that trip did not come with white tablecloths, which is true almost everywhere
+and undeniable in Vietnam.
 
 ---
 
