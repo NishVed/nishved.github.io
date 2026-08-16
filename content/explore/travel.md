@@ -39,14 +39,27 @@ That kept happening. Nobody tells you that carrying an instrument does the intro
 
 ## Germany
 
-*Berlin — 11–12 October 2019*
+*Berlin and Potsdam — 11–13 October 2019*
 
-Berlin was one night, in a hostel off Mohrenstrasse, squeezed between Amsterdam and the long haul
-south. Not remotely enough for that city, and I knew it at the time.
+Two nights in a hostel off Mohrenstrasse, and the only city on the trip that made no attempt
+whatsoever to charm me. After Amsterdam's canals and before Prague's spires, Berlin was entirely
+uninterested in whether I liked it. I liked it enormously.
 
-What you get in a night is a first impression, and Berlin's is that it refuses to be charming at
-you. After Amsterdam's canals and before Prague's spires, it was the one place on the trip that
-seemed entirely uninterested in whether I liked it. I did.
+I spent a long stretch at the **East Side Gallery** — the surviving mile of the Wall, painted end
+to end. One panel is titled *Curriculum Vitae*: every year from 1961 to 1989 written out, a rose
+for each of the 136 people who died trying to cross, and two lines that have stayed with me since.
+
+{{< photo src="travel/berlin-east-side-gallery.jpg" alt="A painted section of the Berlin Wall titled Curriculum Vitae, listing the years 1961 to 1989 in large hand-painted numerals with small pink roses between them, and hand-lettered text about GDR refugees triggering both the building and the fall of the Wall." caption="East Side Gallery. “ESCAPE is a mighty method to destabilise dominion.” A wall that keeps its own CV." >}}
+
+*Escape is a mighty method to destabilise dominion*, on the side that went up. *Gratitude to the
+killed and surviving refugees*, on the side that came down. The same people caused both.
+
+Out to **Potsdam** as well, which meant a train at an hour I'd rather not discuss.
+
+{{< photo src="travel/germany-ice-train-potsdam.jpg" alt="The interior of a German ICE train early in the morning, rows of empty blue seats, luggage on the overhead racks, a single passenger visible further down the carriage." caption="5:06am, somewhere near Potsdam. The unglamorous half of a rail pass." >}}
+
+Most of that trip was like this — a Eurail pass, a lot of early starts, and several countries seen
+between trains.
 
 ---
 
@@ -75,6 +88,8 @@ in that city — and a day that ended, as several did, with more jazz than I'd p
 Vienna calls itself the city of music, which makes a concert less a plan than an obligation.
 Mozart and Johann Strauss the younger, then *Don Giovanni* — *Là ci darem la mano* in a room built
 precisely for that sound.
+
+{{< photo src="travel/vienna-at-night.jpg" alt="Vienna seen from above at night, rooftops and lit apartment facades in the foreground, the city spreading out to a horizon of orange lights with a cathedral spire lit in the distance." caption="Vienna after the concert. The spire in the distance is Stephansdom." >}}
 
 The next morning, the flea market at the Naschmarkt. Both of those are the city; you need the
 opera *and* the junk stalls or you have only seen half of it.
@@ -256,9 +271,9 @@ and grey arrived in colour.
 **Meghalaya, May 2024.** On a bike, through **Shillong** and the canyons — one of the wettest
 places on earth, visited in the rain, which was entirely predictable.
 
-**Brahmatal, into 2025.** A winter trek in the Uttarakhand Himalaya, walked across the new year.
-Cold nights, warm company. A completely different proposition from everything above, and the one
-I think about most.
+**Brahmatal, into 2025.** A winter trek in the Uttarakhand Himalaya, walked across the new year —
+snow line, frozen lake, and a summit reached at sunrise. Cold nights, warm company. A completely
+different proposition from everything above, and the one I think about most.
 
 **Hyderabad**, where I live: the old city, which you should never skip, and a long-running project
 of working through the city's cafés — including a coffee platter with a praline I had genuinely
