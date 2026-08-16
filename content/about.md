@@ -75,9 +75,8 @@ That's the same question I ask of a system. Why this boundary and not that one. 
 here, and in exchange for what. An architecture and a song are both things that appear to simply
 work until you look at the mechanism.
 
-So the [guitar](/explore/guitar/), the [kitchen](/explore/kitchen/) and the
-[travelling](/explore/travel/) aren't a change of subject from the architecture. They're the same
-habit with the surface swapped out.
+So the [guitar](/explore/guitar/) and the [travelling](/explore/travel/) aren't a change of
+subject from the architecture. They're the same habit with the surface swapped out.
 
 ---
 

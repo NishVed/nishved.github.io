@@ -39,5 +39,5 @@ into the bossa nova underneath *Khwabon Ke Parinde*.
 
 ## Exploring
 
-Cooking as a fast feedback loop, and travelling slowly enough that the second day differs from
-the first.
+Travelling slowly enough that the second day differs from the first — and writing up the
+[2019 Europe trip](/explore/travel/) properly, six years late.
