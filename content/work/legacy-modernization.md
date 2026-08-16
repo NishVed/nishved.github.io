@@ -1,6 +1,6 @@
 ---
 title: "Legacy Code Modernization AI Assistant"
-description: "NTT DATA engagement · AI Engineer Advisor · Dec 2025 – Present"
+description: "NTT DATA · Syntphony Insurance Cloud Migration · AI Engineer Advisor · Dec 2025 – Present"
 weight: 4
 hidemeta: true
 ShowReadingTime: false
@@ -8,7 +8,9 @@ ShowReadingTime: false
 
 Mainframe modernization normally starts with senior COBOL engineers spending weeks manually
 reading code to reconstruct business logic and map dependencies — slow, expensive, and
-inconsistent, and that expertise is getting scarcer every year.
+inconsistent, and that expertise is getting scarcer every year. This assistant is part of
+[Syntphony Insurance Cloud Migration](https://www.syntphony.com/), where those estates carry
+decades of encoded policy and claims logic that has to survive the move to cloud intact.
 <!--more-->
 
 Generic text chunking destroys COBOL: it splits mid-paragraph and mid-COPY statement, and loses
