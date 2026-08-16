@@ -26,10 +26,16 @@ requesting access to your data might be an autonomous agent, not a person. That 
 
 I'm currently **AI Engineer Advisor at NTT DATA**, where I lead architecture and technical
 direction for a team of roughly eight senior engineers, AI engineers, and data scientists across
-8–10 enterprise AI modernization programs — spanning conversational knowledge systems, agentic
-platforms built on MCP and A2A, legacy mainframe modernization, and operational intelligence for
-telecom and retail clients. My role is architecture and technical leadership: defining the
-systems, making the trade-offs, and setting the direction the team builds toward.
+8–10 enterprise AI modernization programs. Most of that work runs through
+[Syntphony](https://www.syntphony.com/), NTT DATA's productized technology ecosystem — I architect
+AI modernization across **Syntphony AI**, **Syntphony Open Telecom Networks**, **Syntphony
+Stations**, and **Syntphony Commerce & Payments**, on platforms serving approximately 2 million
+users.
+
+In practice that means conversational knowledge systems, agentic platforms built on MCP and A2A,
+legacy mainframe modernization, and cross-domain operational intelligence. My role is architecture
+and technical leadership: defining the systems, making the trade-offs, and setting the direction
+the team builds toward.
 
 The throughline across all of it — security architecture, Zero Trust for AI agents, and now
 agentic AI platforms at enterprise scale — is the same question asked in different contexts:
