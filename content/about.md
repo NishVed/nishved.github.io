@@ -21,8 +21,12 @@ sensitive data from every insurance company in the country — I architected the
 Fabric**: a Zero Trust framework (NIST 800-207, structured as PAP/PDP/PEP/PIP) extended with an
 Adaptive Trust Engine and AI governance controls, purpose-built for a world where the thing
 requesting access to your data might be an autonomous agent, not a person. That work is now a
-[registered design](/publications/) with the Government of India, and the basis of a
-[published paper on securing MCP-based AI systems](/publications/).
+[registered design](/publications/) with the Government of India.
+
+Separately, I'm a co-author on
+[MCP Guardian](/publications/), a peer-reviewed paper proposing a security layer for
+MCP-based AI systems — independent research with collaborators across eight companies, and the
+closest thing to a public statement of how I think agent tool-calls should be governed.
 
 I'm currently **AI Engineer Advisor at NTT DATA**, where I lead architecture and technical
 direction for a team of roughly eight senior engineers, AI engineers, and data scientists across

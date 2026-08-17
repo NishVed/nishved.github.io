@@ -7,13 +7,12 @@ ShowShareButtons: false
 ShowBreadCrumbs: false
 ---
 
-Two bodies of work, each with more than one output.
 
 ## AI Trust Fabric
 
 The Zero Trust and AI governance architecture I designed for a national-scale insurance data
 ecosystem — where the thing requesting access to sensitive records may be an autonomous agent
-rather than a person. It produced two things.
+rather than a person.
 
 ### Secure Insurance Data Management Device
 
@@ -26,15 +25,6 @@ and secure data access mechanisms.
 
 <small>The official filing records the name as "Nishant Yeduruvada," a transliteration variant of
 Nishanth Veduruvada.</small>
-
-### Building the Trust Fabric: Reinventing National-Scale Insurance Security in the AI Era
-
-*Research paper, in progress.*
-
-The written account of the same architecture — why Zero Trust as most organisations implement it
-is binary and static, what has to change when AI agents become the primary actors, and what the
-adaptive trust model looks like in practice. The argument is set out in
-[this essay](/writing/trust-fabric-zero-trust-ai-era/).
 
 ---
 

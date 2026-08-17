@@ -25,7 +25,7 @@ steps:
     detail: >
       Sole architect of the AI Trust Fabric: NIST 800-207 extended with continuous
       trust scoring and an AI governance layer, for a world where the thing requesting
-      your data is an autonomous agent. Became a registered design and a published paper.
+      your data is an autonomous agent. Became a registered design.
 
   - employer: "Arcstream Technologies"
     role: "Technical Security Lead"
