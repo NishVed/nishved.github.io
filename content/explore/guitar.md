@@ -30,6 +30,6 @@ A cover of *Roja* — the A. R. Rahman album that set off the whole
 {{< yt id="g98moskV5ys" title="Roja — guitar cover" >}}
 
 {{< note >}}
-**More coming here** — teaching approach, what I work on with students, and more recordings. If
-you're interested in lessons, [email me](mailto:nishanth.themaster@gmail.com).
+I take on a small number of students. If you want to learn, or you're stuck on
+something specific, [email me](mailto:nishanth.themaster@gmail.com).
 {{< /note >}}

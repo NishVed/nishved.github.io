@@ -278,8 +278,3 @@ different proposition from everything above, and the one I think about most.
 **Hyderabad**, where I live: the old city, which you should never skip, and a long-running project
 of working through the city's cafés — including a coffee platter with a praline I had genuinely
 mixed feelings about, which is still more interesting than something merely fine.
-
-{{< note >}}
-**More coming here** — Meghalaya and Brahmatal both deserve more than a paragraph, and there are
-about eight hundred photographs from these trips I haven't been through yet.
-{{< /note >}}
