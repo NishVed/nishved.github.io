@@ -74,6 +74,11 @@ params:
       underneath, then build it or explain it. The architecture above is the same habit, pointed
       at systems instead of songs.
 
+  # Downloadable CV, surfaced as a button in the homepage hero.
+  cv:
+    file: "/Nishanth-Veduruvada-CV.pdf"
+    label: "Download CV"
+
   socialIcons:
     - name: github
       url: "https://github.com/NishVed"

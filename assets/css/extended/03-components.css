@@ -417,3 +417,19 @@ body.is-home .main {
   color: var(--secondary);
   line-height: 1.5;
 }
+
+/* Download CV — reads as an action, not another nav link. */
+.btn--download {
+  border-color: var(--rule);
+  background: var(--surface);
+}
+.btn--download svg {
+  flex: none;
+  opacity: 0.75;
+}
+.btn--download:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--surface-strong);
+}
+.btn--download:hover svg { opacity: 1; }

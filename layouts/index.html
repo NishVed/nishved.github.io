@@ -16,6 +16,19 @@
       <a class="btn btn--primary" href="/work/">Architecture &amp; case studies</a>
       <a class="btn" href="/writing/">Writing</a>
       <a class="btn" href="/about/">About</a>
+      {{- with site.Params.cv }}
+      <a class="btn btn--download" href="{{ .file }}" download>
+        <svg aria-hidden="true" focusable="false" width="15" height="15" viewBox="0 0 24 24"
+             fill="none" stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+          <polyline points="7 10 12 15 17 10" />
+          <line x1="12" y1="15" x2="12" y2="3" />
+        </svg>
+        {{ .label | default "Download CV" }}
+        <span class="visually-hidden">(PDF)</span>
+      </a>
+      {{- end }}
     </div>
   </header>
 
