@@ -1,0 +1,46 @@
+# Career journey — rendered as the homepage timeline.
+# Ordered most recent first. `arc` is the one-line reason this step exists in
+# the story; it is what makes this a convergence rather than a job list.
+
+intro: >
+  I arrived at enterprise AI architecture through security rather than the other
+  way round, and that order is the whole point.
+
+steps:
+  - employer: "NTT DATA"
+    role: "AI Engineer Advisor"
+    period: "Dec 2025 – Present"
+    current: true
+    arc: "Agentic platforms at enterprise scale"
+    detail: >
+      Architecture and technical direction across the Syntphony product ecosystem —
+      agentic platforms on MCP and A2A, enterprise retrieval, legacy modernization —
+      for a team of eight, on platforms serving around 2 million users.
+
+  - employer: "Levo.ai"
+    role: "AI Enterprise Architect"
+    client: "Client: national-scale insurance data ecosystem"
+    period: "Jan 2025 – Dec 2025"
+    arc: "Zero Trust, pointed at AI agents"
+    detail: >
+      Sole architect of the AI Trust Fabric: NIST 800-207 extended with continuous
+      trust scoring and an AI governance layer, for a world where the thing requesting
+      your data is an autonomous agent. Became a registered design and a published paper.
+
+  - employer: "Arcstream Technologies"
+    role: "Technical Security Lead"
+    period: "Aug 2022 – Jan 2025"
+    arc: "Security architecture as the day job"
+    detail: >
+      Zero Trust segmentation and a SASE migration across 5,000+ users, replacing
+      perimeter trust with identity-centric control. The grounding that everything
+      after it depends on.
+
+  - employer: "Reezanorp Technologies"
+    role: "Senior Software Engineer"
+    period: "Dec 2016 – Jul 2022"
+    arc: "Building the systems first"
+    detail: >
+      Machine learning, computer vision, analytics and ETL in Python. Six years of
+      building things before designing them, which is the part that makes
+      architecture reviews useful rather than theoretical.

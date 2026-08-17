@@ -6,7 +6,7 @@
 
 <div class="home">
 
-  {{- /* ---------- 1. Identity ---------- */}}
+  {{- /* ---------- 1. Positioning ---------- */}}
   <header class="hero" data-domain="architecture">
     <h1 class="hero__name">{{ $id.name }}</h1>
     <span class="hero__role">{{ $id.role }}</span>
@@ -32,7 +32,7 @@
     </div>
   </header>
 
-  {{- /* ---------- 2. What I build ---------- */}}
+  {{- /* ---------- 2. Expertise ---------- */}}
   <section class="section" data-domain="architecture" aria-labelledby="h-build">
     <div class="section__head">
       <div>
@@ -105,7 +105,59 @@
     </div>
   </section>
 
-  {{- /* ---------- 3 & 4. Evidence: case studies ---------- */}}
+  {{- /* ---------- 3. Career journey ---------- */}}
+  {{- with site.Data.journey }}
+  <section class="section" data-domain="architecture" aria-labelledby="h-journey">
+    <div class="section__head">
+      <div>
+        <span class="section__kicker">The route here</span>
+        <h2 class="section__title" id="h-journey">Security first, then AI</h2>
+      </div>
+      <a class="section__more" href="/about/">More about me →</a>
+    </div>
+    {{- with .intro }}<p class="section__lede">{{ . }}</p>{{ end }}
+
+    <ol class="journey">
+      {{- range .steps }}
+      <li class="step{{ if .current }} step--current{{ end }}">
+        <div class="step__arc">{{ .arc }}</div>
+        <div class="step__head">
+          <span class="step__employer">{{ .employer }}</span>
+          <span class="step__period">{{ .period }}</span>
+        </div>
+        <div class="step__role">
+          {{ .role }}{{ with .client }} <span class="step__client">· {{ . }}</span>{{ end }}
+        </div>
+        <p class="step__detail">{{ .detail }}</p>
+      </li>
+      {{- end }}
+    </ol>
+  </section>
+  {{- end }}
+
+  {{- /* ---------- 4. Credentials ---------- */}}
+  {{- with site.Data.credentials }}
+  <section class="section" data-domain="architecture" aria-labelledby="h-creds">
+    <div class="section__head">
+      <div>
+        <span class="section__kicker">Credentials</span>
+        <h2 class="section__title" id="h-creds">Published and registered</h2>
+      </div>
+      <a class="section__more" href="/publications/">Details →</a>
+    </div>
+    <div class="creds">
+      {{- range .items }}
+      <article class="cred">
+        <div class="cred__kind">{{ .kind }}</div>
+        <h3 class="cred__title"><a href="{{ .url }}">{{ .title }}</a></h3>
+        <p class="cred__meta">{{ .meta }}</p>
+      </article>
+      {{- end }}
+    </div>
+  </section>
+  {{- end }}
+
+  {{- /* ---------- 5. Evidence: case studies ---------- */}}
   {{- with $work }}
   <section class="section" data-domain="architecture" aria-labelledby="h-work">
     <div class="section__head">
@@ -130,7 +182,7 @@
   </section>
   {{- end }}
 
-  {{- /* ---------- 5. Writing ---------- */}}
+  {{- /* ---------- 6. Writing ---------- */}}
   {{- with $writing }}
   <section class="section" data-domain="architecture" aria-labelledby="h-writing">
     <div class="section__head">
@@ -154,47 +206,52 @@
   </section>
   {{- end }}
 
-  {{- /* ---------- 6. Creative work ---------- */}}
-  <section class="section" data-domain="music" aria-labelledby="h-bl">
+  {{- /* ---------- 7. Beyond — creative + personal, merged ---------- */}}
+  <section class="section" data-domain="music" aria-labelledby="h-beyond">
     <div class="section__head">
       <div>
-        <span class="section__kicker">Beyond Listening</span>
-        <h2 class="section__title" id="h-bl">Decoding music, one song at a time</h2>
+        <span class="section__kicker">Beyond</span>
+        <h2 class="section__title" id="h-beyond">Decoding music, and going places slowly</h2>
       </div>
       <a class="section__more" href="/beyond-listening/">The series →</a>
     </div>
-    <p class="section__lede">
-      A YouTube series taking Indian film music apart one song at a time — rhythm, harmony,
-      timbre, form, and the choices a composer made on purpose.
-    </p>
-    {{- with $episodes }}
+    <p class="section__lede">{{ $id.curiosity }}</p>
     <div class="cards cards--two">
-      {{- range first 2 . }}
+      {{- range first 1 $episodes }}
       <article class="card">
         <div class="card__eyebrow">
-          {{- if .Params.episode }}Episode {{ .Params.episode }}{{ else }}{{ .Params.label | default "Extra" }}{{ end -}}
+          {{- if .Params.episode }}Beyond Listening · Episode {{ .Params.episode }}{{ else }}Beyond Listening{{ end -}}
         </div>
         <h3 class="card__title">
           <a class="card__link" href="{{ .RelPermalink }}">{{ .Title }}</a>
         </h3>
-        <p class="card__body">{{ with .Description }}{{ . | truncate 180 }}{{ end }}</p>
-        {{- with .Params.film }}<div class="card__meta">{{ . }}{{ with $.Params.composer }} · {{ . }}{{ end }}</div>{{ end }}
+        <p class="card__body">{{ with .Description }}{{ . | truncate 170 }}{{ end }}</p>
       </article>
       {{- end }}
+      <article class="card">
+        <div class="card__eyebrow">Explore</div>
+        <h3 class="card__title">
+          <a class="card__link" href="/explore/travel/">Travel — seven countries, mostly following the music</a>
+        </h3>
+        <p class="card__body">
+          Europe in 2019 with a guitar and no plan, Vietnam on Bourdain's advice, and a long
+          monsoon drive through south India.
+        </p>
+      </article>
     </div>
-    {{- end }}
   </section>
 
-  {{- /* ---------- 7. Personal exploration ---------- */}}
-  <section class="section" data-domain="explore" aria-labelledby="h-explore">
-    <div class="section__head">
-      <div>
-        <span class="section__kicker">Explore</span>
-        <h2 class="section__title" id="h-explore">Guitar, and elsewhere</h2>
-      </div>
-      <a class="section__more" href="/explore/">Explore →</a>
+  {{- /* ---------- Contact ---------- */}}
+  <section class="section contact" aria-labelledby="h-contact">
+    <h2 class="section__title" id="h-contact">Let's talk</h2>
+    <p class="section__lede">
+      I'm open to Principal and Enterprise Architect conversations, particularly where AI,
+      security and governance meet. The fastest route is email.
+    </p>
+    <div class="hero__actions">
+      <a class="btn btn--primary" href="mailto:{{ replace (index (where site.Params.socialIcons "name" "email") 0).url "mailto:" "" }}">Email me</a>
+      <a class="btn" href="https://linkedin.com/in/nish-ved">LinkedIn</a>
     </div>
-    <p class="section__lede">{{ $id.curiosity }}</p>
   </section>
 
 </div>

@@ -433,3 +433,132 @@ body.is-home .main {
   background: var(--surface-strong);
 }
 .btn--download:hover svg { opacity: 1; }
+
+/* ---------- Career journey timeline ---------- */
+
+.journey {
+  position: relative;
+  margin-top: var(--space-m);
+  padding-left: 26px;
+}
+/* The spine. */
+.journey::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 6px;
+  bottom: 6px;
+  width: 1px;
+  background: var(--rule);
+}
+
+.step {
+  position: relative;
+  padding-bottom: var(--space-m);
+}
+.step:last-child { padding-bottom: 0; }
+
+/* Node on the spine. */
+.step::before {
+  content: "";
+  position: absolute;
+  left: -26px;
+  top: 6px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--theme);
+  border: 2px solid var(--rule);
+}
+.step--current::before {
+  border-color: var(--accent);
+  background: var(--accent);
+}
+
+.step__arc {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: var(--space-2xs);
+}
+
+.step__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 0.15rem;
+}
+.step__employer {
+  font-size: var(--step-0);
+  font-weight: 650;
+  letter-spacing: -0.01em;
+}
+.step__period {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--secondary);
+}
+.step__role {
+  font-size: var(--step--1);
+  color: var(--secondary);
+  margin-bottom: var(--space-2xs);
+}
+.step__client { opacity: 0.8; }
+.step__detail {
+  font-size: var(--step--1);
+  color: var(--secondary);
+  line-height: 1.6;
+  max-width: 62ch;
+  margin: 0;
+}
+
+/* ---------- Credentials strip ---------- */
+
+.creds {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-s);
+}
+.cred {
+  padding: var(--space-s) var(--space-m);
+  border: 1px solid var(--rule);
+  border-left: 2px solid var(--accent);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+.cred__kind {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: var(--space-2xs);
+}
+.cred__title {
+  font-size: var(--step--1);
+  font-weight: 620;
+  line-height: 1.35;
+  margin: 0 0 var(--space-2xs);
+}
+.cred__meta {
+  font-size: 0.75rem;
+  color: var(--secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (max-width: 720px) {
+  .journey { padding-left: 22px; }
+  .step::before { left: -22px; }
+  .step__detail { max-width: none; }
+}
+
+/* Contact close-out. */
+.contact { border-bottom: 0; }
+.contact .section__title { margin-bottom: var(--space-xs); }
+
+/* Ordered list used for the timeline shouldn't carry list styling. */
+ol.journey { list-style: none; margin: 0; }
