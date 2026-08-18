@@ -23,9 +23,6 @@ An industrial design registration — not a patent — covering the secure insur
 architecture: Zero Trust principles, adaptive trust evaluation, identity-centric access controls,
 and secure data access mechanisms.
 
-<small>The official filing records the name as "Nishant Yeduruvada," a transliteration variant of
-Nishanth Veduruvada.</small>
-
 ---
 
 ## MCP Guardian
