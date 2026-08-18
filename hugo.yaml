@@ -77,10 +77,11 @@ params:
       underneath, then build it or explain it. The architecture above is the same habit, pointed
       at systems instead of songs.
 
-  # Favicon / tab icon: a black-and-white crop of the Van Gogh-exhibit portrait.
-  # Regenerate from assets/img/avatar-head.jpg through Hugo's image pipeline:
-  # .Filter (images.Grayscale) (images.Brightness 8) (images.Contrast 22), then
-  # Resize to 16/32/180. The raw crop is too dark to read at 16px without the boost.
+  # Favicon / tab icon: a black-and-white head crop of the Van Gogh-exhibit
+  # portrait. Regenerate with `python3 tools/make-favicon.py` after changing
+  # assets/img/portrait.jpg -- the icons need a far harder levels curve than
+  # the on-page portrait, because a dim photograph of a face reads as a grey
+  # smudge at 16px without it.
   assets:
     favicon: "/favicon.ico"
     favicon16x16: "/favicon-16x16.png"
