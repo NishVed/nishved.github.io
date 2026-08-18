@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <title>N</title>
+  <!-- Safari pinned tabs take a single-colour silhouette, so the portrait
+       favicon can't be used here. Initial only. -->
+  <path d="M10 88 V12 H32 L70 58 V12 H90 V88 H68 L30 42 V88 Z"/>
+</svg>
