@@ -35,12 +35,3 @@ steps:
       Zero Trust segmentation and a SASE migration across 5,000+ users, replacing
       perimeter trust with identity-centric control. The grounding that everything
       after it depends on.
-
-  - employer: "Reezanorp Technologies"
-    role: "Senior Software Engineer"
-    period: "Dec 2016 – Jul 2022"
-    arc: "Building the systems first"
-    detail: >
-      Machine learning, computer vision, analytics and ETL in Python. Six years of
-      building things before designing them, which is the part that makes
-      architecture reviews useful rather than theoretical.
