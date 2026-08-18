@@ -22,6 +22,12 @@ OUT = os.path.join(ROOT, "static")
 # needs the head to fill the tile; the on-page portrait does not.
 CROP = dict(top=23, left=122, size=250)
 
+# Chrome keys cached favicons by icon URL and does not re-fetch on a hard
+# reload, so a site that once had no icon keeps showing none. Publishing the
+# icons under a versioned filename gives Chrome a URL it has never resolved.
+# Bump this whenever the icon image changes, and update hugo.yaml to match.
+VERSION = "v2"
+
 # Levels: lift the midtones hard and clip the background to white. Chosen by
 # rendering 16/32px candidates against both a light and a dark tab strip.
 ICON_LEVELS = dict(lo=18, hi=132, gamma=0.75, sharpen=0.25)   # 16px, 32px
@@ -124,9 +130,13 @@ def main():
     p16 = render(16, ICON_LEVELS)
     p32 = render(32, ICON_LEVELS)
     p180 = render(180, TOUCH_LEVELS)
-    write_png_gray(os.path.join(OUT, "favicon-16x16.png"), 16, 16, p16)
-    write_png_gray(os.path.join(OUT, "favicon-32x32.png"), 32, 32, p32)
-    write_png_gray(os.path.join(OUT, "apple-touch-icon.png"), 180, 180, p180)
+    for name, size, px in (("favicon-16x16", 16, p16),
+                           ("favicon-32x32", 32, p32),
+                           ("apple-touch-icon", 180, p180)):
+        # Plain name for anything that guesses the conventional path, and a
+        # versioned name for the links the page actually advertises.
+        write_png_gray(os.path.join(OUT, f"{name}.png"), size, size, px)
+        write_png_gray(os.path.join(OUT, f"{name}.{VERSION}.png"), size, size, px)
 
     # PNG-payload ICO (Vista+). Every current browser decodes it; verified by
     # rendering the file in Chrome rather than trusting the header alone.
@@ -141,7 +151,7 @@ def main():
         off += len(b)
     with open(os.path.join(OUT, "favicon.ico"), "wb") as f:
         f.write(head + ents + b"".join(b for _, b in blobs))
-    print("wrote favicon.ico, favicon-16x16.png, favicon-32x32.png, apple-touch-icon.png")
+    print(f"wrote favicon.ico + 16/32/180 png, plain and .{VERSION}. variants")
 
 if __name__ == "__main__":
     main()

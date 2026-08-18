@@ -84,9 +84,9 @@ params:
   # smudge at 16px without it.
   assets:
     favicon: "/favicon.ico"
-    favicon16x16: "/favicon-16x16.png"
-    favicon32x32: "/favicon-32x32.png"
-    apple_touch_icon: "/apple-touch-icon.png"
+    favicon16x16: "/favicon-16x16.v2.png"
+    favicon32x32: "/favicon-32x32.v2.png"
+    apple_touch_icon: "/apple-touch-icon.v2.png"
     safari_pinned_tab: "/safari-pinned-tab.svg"
 
   # Downloadable CV, surfaced as a button in the homepage hero.
