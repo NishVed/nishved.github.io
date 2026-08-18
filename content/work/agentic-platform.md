@@ -6,9 +6,9 @@ hidemeta: true
 ShowReadingTime: false
 ---
 
-Multiple teams inside NTT DATA were independently rebuilding the same agentic-AI plumbing for
-every telecom engagement — tool integration, agent-to-agent communication, governance, audit,
-rate limiting — with inconsistent security postures and no reuse between them.
+Multiple teams were independently rebuilding the same agentic-AI plumbing for every telecom
+engagement — tool integration, agent-to-agent communication, governance, audit, rate limiting —
+with no shared governance model and no reuse between them.
 <!--more-->
 
 I defined the reference architecture for a reusable platform layer instead of another one-off

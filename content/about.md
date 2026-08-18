@@ -16,8 +16,8 @@ segmentation and a SASE migration covering 5,000+ users as Technical Security Le
 Technologies (2022–2025).
 
 Then generative AI collided with enterprise security, and I ended up at the center of it. At
-Levo.ai, working with the Insurance Information Bureau of India — an organization that aggregates
-sensitive data from every insurance company in the country — I architected the **AI Trust
+Levo.ai, working on a national-scale insurance data ecosystem — one that aggregates sensitive
+records from across the country's insurance industry — I architected the **AI Trust
 Fabric**: a Zero Trust framework (NIST 800-207, structured as PAP/PDP/PEP/PIP) extended with an
 Adaptive Trust Engine and AI governance controls, purpose-built for a world where the thing
 requesting access to your data might be an autonomous agent, not a person. That work is now a
