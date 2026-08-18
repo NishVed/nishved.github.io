@@ -8,9 +8,25 @@
 
   {{- /* ---------- 1. Positioning ---------- */}}
   <header class="hero" data-domain="architecture">
-    {{- with $id.eyebrow }}<div class="hero__eyebrow">{{ . }}</div>{{ end }}
-    <h1 class="hero__name">{{ $id.name }}</h1>
-    <span class="hero__role">{{ $id.role }}</span>
+    <div class="hero__top">
+      <div class="hero__id">
+        {{- with $id.eyebrow }}<div class="hero__eyebrow">{{ . }}</div>{{ end }}
+        <h1 class="hero__name">{{ $id.name }}</h1>
+        <span class="hero__role">{{ $id.role }}</span>
+      </div>
+      {{- with resources.Get "img/portrait.jpg" }}
+      {{- $p := .Filter (images.Grayscale) (images.Brightness 4) (images.Contrast 12) }}
+      {{- $s1 := $p.Resize "220x webp q82" }}
+      {{- $s2 := $p.Resize "440x webp q82" }}
+      <img class="hero__portrait"
+           src="{{ $s1.RelPermalink }}"
+           srcset="{{ $s1.RelPermalink }} 220w, {{ $s2.RelPermalink }} 440w"
+           sizes="(max-width: 720px) 120px, 190px"
+           width="{{ $s1.Width }}" height="{{ $s1.Height }}"
+           alt="Nishanth Veduruvada, in front of a projection of Van Gogh's self-portrait"
+           decoding="async">
+      {{- end }}
+    </div>
     <p class="hero__thesis">{{ $id.thesis }}</p>
     <p class="hero__summary">{{ $id.summary }}</p>
     {{- with $id.availability }}

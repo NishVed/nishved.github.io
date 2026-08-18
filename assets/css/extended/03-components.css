@@ -15,6 +15,28 @@
   border-bottom: 1px solid var(--rule);
 }
 
+/* Name block and portrait sit side by side. Grayscale is baked into the
+   shipped bytes by Hugo's image pipeline rather than applied as a CSS filter,
+   so the browser never downloads colour it will not display. */
+.hero__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-l);
+}
+
+.hero__id { min-width: 0; }
+
+.hero__portrait {
+  flex: 0 0 auto;
+  width: 190px;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 1px solid var(--rule);
+  margin-top: 0.35rem;
+}
+
 .hero__name {
   font-size: var(--step-4);
   line-height: 1.05;
@@ -345,6 +367,8 @@
 @media (max-width: 720px) {
   .hero { padding: var(--space-l) 0 var(--space-m); }
   .hero__thesis { max-width: none; font-size: var(--step-1); }
+  .hero__top { flex-direction: row-reverse; justify-content: flex-end; gap: var(--space-m); }
+  .hero__portrait { width: 108px; height: 108px; border-radius: 12px; }
   .section { padding: var(--space-l) 0 var(--space-m); }
   .section__head { flex-direction: column; align-items: flex-start; gap: var(--space-2xs); }
   .episode { grid-template-columns: 1fr; gap: var(--space-2xs); }
