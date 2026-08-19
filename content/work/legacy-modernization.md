@@ -13,20 +13,24 @@ inconsistent, and that expertise is getting scarcer every year. This assistant i
 decades of encoded policy and claims logic that has to survive the move to cloud intact.
 <!--more-->
 
-Generic text chunking destroys COBOL: it splits mid-paragraph and mid-COPY statement, and loses
-the structure retrieval depends on. So the core of this system is a structure-aware parser that
-understands COBOL's divisions and JCL step boundaries, expands COPYBOOKs inline, and tags every
-chunk with program, paragraph, and line range — because every answer has to cite exactly where it
-came from. A static-analysis dependency graph (CALL statements, COPY references, JCL EXEC PGM=
-links) sits alongside the vector index for structural questions like "what does this program call?"
+Generic text handling destroys COBOL: it splits mid-paragraph and mid-COPY statement and loses
+the structure any useful answer depends on. So the core of this system is a structure-aware parser
+that understands COBOL's divisions and JCL step boundaries, expands COPYBOOKs inline, and keeps
+everything tagged with program, paragraph, and line range — because every answer has to cite
+exactly where it came from. A static-analysis dependency graph (CALL statements, COPY references,
+JCL EXEC PGM= links) answers the structural questions, like "what does this program call?"
 
-RAG over fine-tuning was the only real option: the source corpus is client-specific, keeps
-changing as modernization proceeds, and a fine-tuned model can't cite a specific line of code.
-The system exposes its capabilities as MCP tools (`search_code`, `get_dependencies`,
-`get_copybook`, `get_impact`) and uses A2A for the RAG agent, dependency-graph agent, and
-migration-guidance agent to collaborate.
+**There is no vector store here, and that is the design.** Rather than embedding the estate and
+retrieving by similarity, the codebase is exposed to the model as MCP tools — `search_code`,
+`get_dependencies`, `get_copybook`, `get_impact` — which the model calls to fetch exactly the code
+it needs and pulls back into its own context. An index would start drifting the moment it was
+built, since the corpus is client-specific and changes as modernization proceeds; a tool call
+reads the estate as it currently stands. It also makes citation exact rather than probabilistic —
+the answer points at the program, paragraph and line the tool actually returned. A2A handles
+collaboration between the agents working on top of those tools.
 
-**My role:** designed the RAG architecture including the parser, chunking strategy, and
-dependency-graph extraction; architected the MCP/A2A multi-agent system.
+**My role:** designed the code-intelligence architecture — the structure-aware parser, the
+dependency-graph extraction, and the MCP tool schemas the model reaches the estate through;
+architected the MCP/A2A multi-agent system.
 
 **Stack:** Azure OpenAI, MCP, A2A, custom Python COBOL/JCL parser, FastAPI.
