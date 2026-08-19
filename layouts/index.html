@@ -29,11 +29,6 @@
     </div>
     <p class="hero__thesis">{{ $id.thesis }}</p>
     <p class="hero__summary">{{ $id.summary }}</p>
-    {{- with $id.availability }}
-    <p class="hero__status">
-      <span class="hero__dot" aria-hidden="true"></span>{{ . }}{{ with $id.location }} <span class="hero__loc">· {{ . }}</span>{{ end }}
-    </p>
-    {{- end }}
     <div class="hero__actions">
       {{- with site.Params.cv }}
       <a class="btn btn--cv" href="{{ .file }}" download>

@@ -588,7 +588,7 @@ body.is-home .main {
 ol.journey { list-style: none; margin: 0; }
 
 /* =========================================================================
-   Hero refinements — portfolio eyebrow, availability, prominent CV
+   Hero refinements — portfolio eyebrow, prominent CV
    ========================================================================= */
 
 .hero__eyebrow {
@@ -599,26 +599,6 @@ ol.journey { list-style: none; margin: 0; }
   color: var(--secondary);
   margin-bottom: var(--space-s);
 }
-
-/* Availability: a quiet status line, not a badge that shouts. */
-.hero__status {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0.45rem;
-  font-size: var(--step--1);
-  color: var(--primary);
-  margin: 0 0 var(--space-m);
-}
-.hero__dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #22a06b;
-  box-shadow: 0 0 0 3px rgba(34, 160, 107, 0.18);
-  flex: none;
-}
-.hero__loc { color: var(--secondary); }
 
 /* The CV is the primary action: filled, not outlined. */
 .btn--cv {
