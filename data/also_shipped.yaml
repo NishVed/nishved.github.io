@@ -1,0 +1,46 @@
+# Programs kept as short entries rather than full case studies.
+#
+# Pareto: six case studies averaging 220 words with no metrics made the whole
+# body of work read as thin -- the weakest pages dragged down the strongest.
+# These four keep their substance and their keywords here, without offering a
+# shallow page to open. Promote one back to a full case study the moment it has
+# real depth or a measured outcome behind it.
+items:
+  - title: "Enterprise Agentic AI Platform"
+    meta: "NTT DATA · reference architecture"
+    body: >
+      A reusable multi-agent platform layer instead of another per-engagement build:
+      MCP as the tool-integration primitive, A2A for cross-domain agent requests. Domain
+      agents plug in and inherit the governance automatically — per-agent OAuth2 identity,
+      full tool-call audit logging, per-agent and per-tool rate limits, a human-in-the-loop
+      approval gateway for high-risk actions, and OpenTelemetry tracing per agent turn.
+      The governance layer is the actual deliverable; the reuse follows from it.
+
+  - title: "Enterprise Knowledge Assistant"
+    meta: "Internal platform · dual-path retrieval"
+    body: >
+      Two distinct paths rather than one pipeline, because the query types differ.
+      Live metrics are answered by querying semantic models directly with row-level
+      security passed through as the calling user — never embedded, because a stale
+      number is worse than no answer. Document queries run through Azure AI Search over
+      permission-scoped content. An LLM classifier routes each question, or both ways
+      when a query spans metrics and documentation.
+
+  - title: "Telecom Operations Intelligence"
+    meta: "NTT DATA engagement · multi-agent OSS"
+    body: >
+      Five OSS domains — RAN, Core, Transport, Inventory, Assurance — each with its own
+      data model, API and metric vocabulary, which makes single-agent query planning
+      unreliable. A query-planning agent decomposes the question and dispatches to
+      domain-specialist agents, then a correlation layer assembles an answer cited by
+      system, network element, metric and timestamp rather than letting the model
+      summarise ungrounded.
+
+  - title: "Retail Operations Assistant"
+    meta: "NTT DATA engagement · multinational energy retailer"
+    body: >
+      Conversational analytics embedded in the client's existing back-office system,
+      with Semantic Kernel routing intent to specialist agents over existing Power BI
+      semantic models rather than a rebuilt analytics layer. Multi-tenancy through
+      Entra ID plus row-level security scoped per business unit and country, so one
+      assistant serves every entity without duplicating access-control logic.

@@ -1,0 +1,71 @@
+{{- /* Legacy COBOL code intelligence. The point of the diagram is that the
+       model reaches the estate through tools at question time -- there is no
+       index sitting in the middle holding a stale copy of the source. */}}
+<figure class="diagram" data-domain="architecture">
+  <svg viewBox="0 0 900 300" role="img" aria-labelledby="mct-title mct-desc" preserveAspectRatio="xMidYMid meet">
+    <title id="mct-title">MCP tool access to a mainframe codebase</title>
+    <desc id="mct-desc">
+      A question reaches the model, which calls MCP tools rather than searching an index.
+      The tool server exposes search code, get dependencies, get copybook and get impact.
+      Those tools read two things built directly from the estate: a structure-aware COBOL and
+      JCL parser that understands divisions, paragraphs and COPYBOOK expansion, and a static
+      dependency graph of CALL, COPY and JCL EXEC PGM links. Results return into the model's
+      context carrying the program, paragraph and line they came from, so the answer cites an
+      exact location instead of a similarity match.
+    </desc>
+
+    <g>
+      <rect class="d-box" x="15" y="120" width="115" height="56" rx="6" />
+      <text class="d-label" x="72" y="145" text-anchor="middle">Question</text>
+      <text class="d-sub" x="72" y="163" text-anchor="middle">natural language</text>
+    </g>
+
+    <g>
+      <rect class="d-box d-box--accent" x="170" y="120" width="120" height="56" rx="6" />
+      <text class="d-label" x="230" y="145" text-anchor="middle">Model</text>
+      <text class="d-sub" x="230" y="163" text-anchor="middle">calls tools</text>
+    </g>
+
+    <g>
+      <rect class="d-box d-box--accent" x="330" y="98" width="200" height="100" rx="6" />
+      <text class="d-label" x="430" y="126" text-anchor="middle">MCP tool server</text>
+      <text class="d-sub" x="430" y="147" text-anchor="middle">search_code · get_impact</text>
+      <text class="d-sub" x="430" y="165" text-anchor="middle">get_dependencies</text>
+      <text class="d-sub" x="430" y="183" text-anchor="middle">get_copybook</text>
+    </g>
+
+    <g>
+      <rect class="d-box" x="580" y="30" width="230" height="72" rx="6" />
+      <text class="d-label" x="695" y="57" text-anchor="middle">Structure-aware parser</text>
+      <text class="d-sub" x="695" y="77" text-anchor="middle">divisions · paragraphs</text>
+      <text class="d-sub" x="695" y="93" text-anchor="middle">COPYBOOKs expanded</text>
+    </g>
+
+    <g>
+      <rect class="d-box" x="580" y="196" width="230" height="72" rx="6" />
+      <text class="d-label" x="695" y="223" text-anchor="middle">Dependency graph</text>
+      <text class="d-sub" x="695" y="243" text-anchor="middle">CALL · COPY</text>
+      <text class="d-sub" x="695" y="259" text-anchor="middle">JCL EXEC PGM=</text>
+    </g>
+
+    <g>
+      <path class="d-flow" d="M130 148 H162" />
+      <path class="d-arrow" d="M162 144 l8 4 -8 4 z" />
+
+      <path class="d-flow" d="M290 148 H322" />
+      <path class="d-arrow" d="M322 144 l8 4 -8 4 z" />
+
+      <path class="d-flow" d="M530 130 Q555 130 555 96 Q555 66 572 66" />
+      <path class="d-arrow" d="M572 62 l8 4 -8 4 z" />
+
+      <path class="d-flow" d="M530 166 Q555 166 555 200 Q555 232 572 232" />
+      <path class="d-arrow" d="M572 228 l8 4 -8 4 z" />
+
+      {{- /* the return leg: results travel back into the model's context */}}
+      <path class="d-flow d-flow--return" d="M330 190 Q250 210 230 190" stroke-dasharray="5 4" />
+      <path class="d-arrow" d="M234 194 l-8 -5 1 9 z" />
+      <text class="d-sub" x="285" y="228" text-anchor="middle">cited source back into context</text>
+    </g>
+  </svg>
+  <figcaption>{{ .Get "caption" | default "No index in the middle. The model asks the estate directly, and every answer carries the program, paragraph and line it came from." }}</figcaption>
+</figure>

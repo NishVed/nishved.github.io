@@ -1,0 +1,48 @@
+{{- define "main" }}
+<div data-domain="architecture">
+  <header class="page-header">
+    <h1>{{ .Title }}</h1>
+  </header>
+
+  {{- with .Content }}
+  <div class="post-content">{{ . }}</div>
+  {{- end }}
+
+  {{- /* Full case studies first, ranked by weight. Deliberately few: depth is
+         the signal, and thin pages next to deep ones drag the whole set down. */}}
+  {{- with sort .RegularPages "Weight" }}
+  <section aria-label="Case studies">
+    <div class="cards">
+      {{- range . }}
+      <article class="card">
+        {{- with .Description }}<div class="card__eyebrow">{{ index (split . " · ") 0 }}</div>{{ end }}
+        <h3 class="card__title"><a class="card__link" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        <p class="card__body">{{ .Summary | plainify | truncate 220 }}</p>
+        {{- with .Description }}<div class="card__meta">{{ . }}</div>{{ end }}
+      </article>
+      {{- end }}
+    </div>
+  </section>
+  {{- end }}
+
+  {{- with site.Data.also_shipped }}
+  <section class="section" aria-labelledby="h-shipped">
+    <div class="section__head">
+      <div>
+        <span class="section__kicker">Also shipped</span>
+        <h2 class="section__title" id="h-shipped">Same period, in brief</h2>
+      </div>
+    </div>
+    <div class="briefs">
+      {{- range .items }}
+      <article class="brief">
+        <h3 class="brief__title">{{ .title }}</h3>
+        {{- with .meta }}<div class="brief__meta">{{ . }}</div>{{ end }}
+        <p class="brief__body">{{ .body }}</p>
+      </article>
+      {{- end }}
+    </div>
+  </section>
+  {{- end }}
+</div>
+{{- end }}

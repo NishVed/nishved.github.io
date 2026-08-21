@@ -621,3 +621,40 @@ ol.journey { list-style: none; margin: 0; }
   content: "— ";
   opacity: 0.55;
 }
+
+/* =========================================================================
+   Also shipped — compressed work entries
+   Deliberately plainer than .card: these sit below the full case studies and
+   must read as a list, not compete with them. Pareto, made visual.
+   ========================================================================= */
+
+.briefs {
+  display: grid;
+  gap: var(--space-m);
+}
+
+.brief {
+  border-top: 1px solid var(--rule);
+  padding-top: var(--space-s);
+}
+
+.brief__title {
+  font-size: var(--step-0);
+  font-weight: 650;
+  margin: 0 0 0.2rem;
+}
+
+.brief__meta {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--secondary);
+  margin-bottom: var(--space-2xs);
+}
+
+.brief__body {
+  color: var(--secondary);
+  margin: 0;
+  max-width: 68ch;
+}

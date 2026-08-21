@@ -1,7 +1,7 @@
 ---
 title: "Legacy Code Modernization AI Assistant"
 description: "NTT DATA · Syntphony Insurance Cloud Migration · AI Engineer Advisor · Dec 2025 – Present"
-weight: 4
+weight: 2
 hidemeta: true
 ShowReadingTime: false
 ---
@@ -28,6 +28,12 @@ built, since the corpus is client-specific and changes as modernization proceeds
 reads the estate as it currently stands. It also makes citation exact rather than probabilistic —
 the answer points at the program, paragraph and line the tool actually returned. A2A handles
 collaboration between the agents working on top of those tools.
+
+{{< mcp-code-tools >}}
+
+Source containment was a hard constraint on this engagement: the estate could not leave the
+client boundary, which rules out shipping code to an external service to be indexed. Reaching the
+codebase in place through tools satisfies that by construction rather than by policy.
 
 **My role:** designed the code-intelligence architecture — the structure-aware parser, the
 dependency-graph extraction, and the MCP tool schemas the model reaches the estate through;
