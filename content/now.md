@@ -15,7 +15,7 @@ ShowBreadCrumbs: false
 AI modernization architecture across NTT DATA's [Syntphony](https://www.syntphony.com/) product
 ecosystem — Syntphony AI, Open Telecom Networks, Insurance Cloud Migration, Stations, and
 Commerce & Payments. Day to day that's agentic platform work on MCP and A2A, enterprise retrieval
-systems, and setting technical direction for a team of around eight.
+systems, and setting technical direction for the team.
 
 ## Thinking about
 

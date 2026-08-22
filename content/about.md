@@ -29,7 +29,7 @@ MCP-based AI systems — independent research with collaborators across eight co
 closest thing to a public statement of how I think agent tool-calls should be governed.
 
 I'm currently **AI Engineer Advisor at NTT DATA**, where I lead architecture and technical
-direction for a team of roughly eight senior engineers, AI engineers, and data scientists across
+direction for a team of senior engineers, AI engineers, and data scientists across
 8–10 enterprise AI modernization programs. Most of that work runs through
 [Syntphony](https://www.syntphony.com/), NTT DATA's productized technology ecosystem — I architect
 AI modernization across **Syntphony AI**, **Syntphony Open Telecom Networks**, **Syntphony
