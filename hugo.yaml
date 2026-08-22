@@ -1,6 +1,6 @@
 baseURL: https://nishved.github.io/
 
-title: Nishanth Veduruvada — AI, Security & Systems Architect
+title: Nishanth Veduruvada — AI Platform Architect
 theme: PaperMod
 
 pagination:
@@ -18,11 +18,13 @@ minify:
 params:
   env: production
   title: Nishanth Veduruvada
-  description: "Nishanth Veduruvada — AI, Security & Systems Architect. I design secure, production-grade AI systems: agentic AI, enterprise RAG, AI governance and Zero Trust architecture. Also decoding music, one song at a time."
+  description: "Nishanth Veduruvada — AI Platform Architect. I build the governance layer that lets autonomous systems ship inside regulated enterprises: agentic platforms on MCP and A2A, AI governance, and NIST 800-207 Zero Trust architecture. Also decoding music, one song at a time."
   keywords:
+    - AI Platform Architect
     - AI Architect
+    - Principal Architect
+    - Enterprise AI Architect
     - Security Architect
-    - Systems Architect
     - Zero Trust
     - Agentic AI
     - Enterprise AI
@@ -61,10 +63,12 @@ params:
   identity:
     name: "Nishanth Veduruvada"
     short: "Nish"
-    role: "AI, Security & Systems Architect"
+    role: "AI Platform Architect"
     eyebrow: "Portfolio / 2026"
     thesis: "I architect enterprise AI systems the way I'd architect a security perimeter: assume nothing, verify everything."
     summary: >
+      I build the governance layer that lets autonomous systems ship inside regulated
+      enterprises — reusable platform architecture that domain teams inherit rather than rebuild.
       Currently AI Engineer Advisor at NTT DATA, leading AI modernization architecture across the
       Syntphony product ecosystem. Previously designed the Zero Trust and AI governance
       architecture behind a national-scale insurance data platform: work that became a
