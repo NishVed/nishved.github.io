@@ -33,8 +33,7 @@ direction for a team of roughly eight senior engineers, AI engineers, and data s
 8–10 enterprise AI modernization programs. Most of that work runs through
 [Syntphony](https://www.syntphony.com/), NTT DATA's productized technology ecosystem — I architect
 AI modernization across **Syntphony AI**, **Syntphony Open Telecom Networks**, **Syntphony
-Insurance Cloud Migration**, **Syntphony Stations**, and **Syntphony Commerce & Payments**, on
-platforms serving approximately 2 million users.
+Insurance Cloud Migration**, **Syntphony Stations**, and **Syntphony Commerce & Payments**.
 
 In practice that means conversational knowledge systems, agentic platforms built on MCP and A2A,
 legacy mainframe modernization, and cross-domain operational intelligence. My role is architecture
