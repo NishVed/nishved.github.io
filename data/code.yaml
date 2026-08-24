@@ -1,0 +1,28 @@
+# The Portfolio -> GitHub edge of the loop.
+#
+# `live: false` entries are not rendered. Flip to true only once the repo
+# actually exists and has content -- a link to an empty repo is worse than no
+# link, because it converts curiosity into a bounce.
+#
+# Create the repos with: Career OS/github/setup.sh
+items:
+  - name: "agent-governance-patterns"
+    live: false
+    url: "https://github.com/NishVed/agent-governance-patterns"
+    claim: "Autonomy is a dial, not a switch."
+    body: >
+      Reference implementations of the controls that decide whether an enterprise agent
+      system reaches production: the disposition ladder, and exception-over-silence.
+      Framework-agnostic, and every pattern carries a note on when not to use it —
+      a pattern without a stated cost is marketing.
+    reading: "/writing/autonomy-is-a-dial-not-a-switch/"
+    reading_label: "The argument behind it"
+
+  - name: "nishved.github.io"
+    live: true
+    url: "https://github.com/NishVed/nishved.github.io"
+    claim: "This site, and how it is built."
+    body: >
+      Hugo, a hand-rolled design system, accessible SVG architecture diagrams as
+      shortcodes, and a favicon pipeline written because a dim photograph of a face is
+      unreadable at 16px without one.
