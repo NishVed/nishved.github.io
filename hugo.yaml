@@ -124,6 +124,10 @@ menu:
       name: Writing
       url: /writing/
       weight: 20
+    - identifier: code
+      name: Code
+      url: /code/
+      weight: 25
     - identifier: beyond-listening
       name: Beyond Listening
       url: /beyond-listening/

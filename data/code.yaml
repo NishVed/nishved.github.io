@@ -7,7 +7,7 @@
 # Create the repos with: Career OS/github/setup.sh
 items:
   - name: "agent-governance-patterns"
-    live: false
+    live: true
     url: "https://github.com/NishVed/agent-governance-patterns"
     claim: "Autonomy is a dial, not a switch."
     body: >

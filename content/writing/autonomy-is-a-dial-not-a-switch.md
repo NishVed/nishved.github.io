@@ -58,3 +58,9 @@ Zero trust says: verify every request, grant least privilege, assume breach. The
 An agent that can only do what its invoking user could do, only when confidence and policy agree, only with an audit record of the evidence and the model version behind it, is not a diminished agent. It is the only kind that gets to keep running.
 
 Autonomy is a dial. Ship the dial, not the switch — and let the customer turn it.
+
+---
+
+*Reference implementations of the disposition ladder and exception-over-silence live in
+[agent-governance-patterns](https://github.com/NishVed/agent-governance-patterns) — each
+pattern with a note on when not to use it.*
