@@ -55,11 +55,14 @@ jobs:
           HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
           HUGO_ENVIRONMENT: production
           TZ: America/Los_Angeles
+        # No --baseURL override. actions/configure-pages reports the
+        # *.github.io URL, which silently overrode hugo.yaml and shipped a
+        # site whose canonical URLs pointed at the old domain. hugo.yaml is
+        # the single source of truth for baseURL.
         run: |
           hugo \
             --gc \
-            --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/"          
+            --minify
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
