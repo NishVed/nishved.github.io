@@ -1,0 +1,48 @@
+{{- /* The control plane as a stack. The point of the diagram is the direction:
+       a request climbs through every layer before anything happens, and each
+       layer is meaningless without the one beneath it. */}}
+<figure class="diagram" data-domain="architecture">
+  <svg viewBox="0 0 900 372" role="img" aria-labelledby="cp-title cp-desc" preserveAspectRatio="xMidYMid meet">
+    <title id="cp-title">The control plane of an agent platform, as six stacked layers</title>
+    <desc id="cp-desc">
+      A request enters at the bottom and climbs through six layers in dependency order. One,
+      identity, resolved from server-side state and never from context. Two, authorization, where
+      the agent may not exceed the invoking actor's scope. Three, the tool surface, built per
+      invocation as an allowlist so an unauthorised action is unrepresentable rather than refused.
+      Four, the policy decision, continuous rather than binary. Five, disposition, which resolves
+      the agent's output to inform, recommend, task, execute or review. Six, evidence: trace,
+      rationale, and a visible exception rather than silent continuation. Each layer depends on the
+      one below it.
+    </desc>
+
+    {{- $rows := slice
+      (dict "y" 20  "n" "6" "name" "Evidence"      "rule" "trace · rationale · exception over silence")
+      (dict "y" 76  "n" "5" "name" "Disposition"   "rule" "inform · recommend · task · execute · review")
+      (dict "y" 132 "n" "4" "name" "Policy"        "rule" "continuous trust, not a boolean")
+      (dict "y" 188 "n" "3" "name" "Tool surface"  "rule" "allowlist per invocation, not a filter")
+      (dict "y" 244 "n" "2" "name" "Authorization" "rule" "the agent's ceiling is the caller's")
+      (dict "y" 300 "n" "1" "name" "Identity"      "rule" "resolved, never asserted")
+    }}
+    {{- range $i, $r := $rows }}
+    <g>
+      <rect class="d-box{{ if or (eq $r.n "5") (eq $r.n "1") }} d-box--accent{{ end }}"
+            x="150" y="{{ $r.y }}" width="640" height="44" rx="6" />
+      <text class="d-sub" x="168" y="{{ add $r.y 27 }}">{{ $r.n }}</text>
+      <text class="d-label" x="196" y="{{ add $r.y 27 }}">{{ $r.name }}</text>
+      <text class="d-sub" x="470" y="{{ add $r.y 27 }}">{{ $r.rule }}</text>
+    </g>
+    {{- end }}
+
+    {{- /* the climb */}}
+    <g>
+      <path class="d-flow" d="M118 356 V 34" />
+      <path class="d-arrow" d="M114 34 l4 -9 4 9 z" />
+      <text class="d-sub" x="106" y="200" text-anchor="middle"
+            transform="rotate(-90 106 200)">every request climbs all six</text>
+    </g>
+
+    <text class="d-sub" x="150" y="366">request in</text>
+    <text class="d-sub" x="790" y="366" text-anchor="end">disposition out</text>
+  </svg>
+  <figcaption>{{ .Get "caption" | default "Six layers in dependency order. Each is meaningless without the one beneath it — a disposition ladder above a borrowed service account governs nothing." }}</figcaption>
+</figure>
