@@ -1,4 +1,4 @@
-# nishved.github.io
+# nishved.com
 
 Personal site of Nishanth Veduruvada — AI, Security & Systems Architect.
 Built with [Hugo](https://gohugo.io/) and the
