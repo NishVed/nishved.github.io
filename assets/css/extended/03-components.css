@@ -658,31 +658,3 @@ ol.journey { list-style: none; margin: 0; }
   margin: 0;
   max-width: 68ch;
 }
-
-/* =========================================================================
-   Code — the Portfolio → GitHub edge
-   ========================================================================= */
-
-.repos { display: grid; gap: var(--space-l); }
-
-.repo {
-  border-top: 1px solid var(--rule);
-  padding-top: var(--space-s);
-}
-
-.repo__name {
-  font-family: var(--font-mono);
-  font-size: var(--step-0);
-  margin: 0 0 var(--space-2xs);
-}
-
-/* The claim is the point of the repo, so it outranks the description. */
-.repo__claim {
-  font-size: var(--step-1);
-  line-height: 1.35;
-  letter-spacing: -0.01em;
-  margin: 0 0 var(--space-2xs);
-}
-
-.repo__body { color: var(--secondary); margin: 0 0 var(--space-2xs); max-width: 68ch; }
-.repo__more { font-size: var(--step--1); }
