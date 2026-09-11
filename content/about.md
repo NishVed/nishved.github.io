@@ -11,7 +11,7 @@ I got to enterprise AI architecture by way of security, not the other way around
 turns out to matter.
 
 I started as a software engineer building machine learning, computer vision, and ETL systems
-(Reezanorp Technologies, 2016–2022). From there I moved into security — leading Zero Trust
+(Reezanorp IT Services, 2016–2022). From there I moved into security — leading Zero Trust
 segmentation and a SASE migration covering 5,000+ users as AI Engineer Lead at Arcstream
 Technologies (2022–2025).
 
