@@ -27,9 +27,9 @@ steps:
       your data is an autonomous agent. Became a registered design.
 
   - employer: "Arcstream Technologies"
-    role: "Technical Security Lead"
+    role: "AI Engineer Lead"
     period: "Aug 2022 – Jan 2025"
-    arc: "Security architecture as the day job"
+    arc: "Where security met AI"
     detail: >
       Zero Trust segmentation and a SASE migration across 5,000+ users, replacing
       perimeter trust with identity-centric control. The grounding that everything

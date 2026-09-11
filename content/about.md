@@ -12,7 +12,7 @@ turns out to matter.
 
 I started as a software engineer building machine learning, computer vision, and ETL systems
 (Reezanorp Technologies, 2016–2022). From there I moved into security — leading Zero Trust
-segmentation and a SASE migration covering 5,000+ users as Technical Security Lead at Arcstream
+segmentation and a SASE migration covering 5,000+ users as AI Engineer Lead at Arcstream
 Technologies (2022–2025).
 
 Then generative AI collided with enterprise security, and I ended up at the center of it. At
