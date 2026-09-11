@@ -1,6 +1,6 @@
 ---
 title: "AI Trust Fabric"
-description: "Levo.ai · AI Enterprise Architect · Jan 2025 – Dec 2025 · Client: national-scale insurance data ecosystem"
+description: "Levo.ai · Zero Trust Architect · Jan 2025 – Dec 2025 · Client: national-scale insurance data ecosystem"
 weight: 1
 hidemeta: true
 ShowReadingTime: false
